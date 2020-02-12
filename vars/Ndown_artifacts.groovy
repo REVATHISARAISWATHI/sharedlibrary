@@ -1,4 +1,4 @@
-def call(){
+def call(JSON){
 def jsonString = JSON
 //println(jsonString)
 def jsonObj = readJSON text: jsonString
