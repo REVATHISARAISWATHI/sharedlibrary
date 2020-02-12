@@ -1,13 +1,13 @@
-def call(JSON){
-def jsonString = JSON
+def call(){
+//def jsonString = JSON
 //println(jsonString)
-def jsonObj = readJSON text: jsonString
+//def jsonObj = readJSON text: jsonString
 //println(jsonObj.brm)
 
 //String a=jsonObj.brm.password.fileName
 //String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.brm.password.fileName
-String fn=b.replaceAll("\\[", "").replaceAll("\\]","");
+//String b=jsonObj.brm.password.fileName
+//String fn=b.replaceAll("\\[", "").replaceAll("\\]","");
 
 
 //httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
