@@ -11,10 +11,12 @@ String fn=b.replaceAll("\\[", "").replaceAll("\\]","");
 
 
 //httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
-   
-  sh "wget --user=admin --password=admin123 'http://3.15.18.214:8081/nexus/service/local/repositories/repo/content/${fn}' "
+        withCredentials([usernamePassword(credentialsId: 'nexus_cred', passwordVariable: 'password', usernameVariable:'username')]) {
+
+  sh "wget $username:$password 'http://3.15.18.214:8081/nexus/service/local/repositories/repo/content/${fn}' "
     // httpMode: 'GET', wget --user=admin --password=admin123 "http://3.15.18.214:8081/nexus/service/local/repositories/repo/content/dynamic_new-1.0.war"
     
    // httpMode: 'GET', url: "http://3.15.18.214:8081/nexus/service/local/repositories/repo/content/dynamic_new-1.0.war" 
     
+}
 }
