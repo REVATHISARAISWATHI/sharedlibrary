@@ -10,6 +10,6 @@ String fn=a.replaceAll("\\[", "").replaceAll("\\]","");
 //String repoid=b.replaceAll("\\[", "").replaceAll("\\]","");
     withCredentials([usernamePassword(credentialsId: 'nexus_cred', passwordVariable: 'password', usernameVariable:'username')]) {
 
-        sh  "curl -v -F r=pri -F hasPom=true -F e=war -F file=@pom.xml -F file=@target/${fn} -u $username:$password http://3.15.18.214:8081/nexus/service/local/artifact/maven/content" 
+        sh  "curl -v -F r=pri -F hasPom=true -F e=war -F file=@pom.xml -F file=@target/'${fn}' -u $username:$password http://3.15.18.214:8081/nexus/service/local/artifact/maven/content" 
 }
 }
