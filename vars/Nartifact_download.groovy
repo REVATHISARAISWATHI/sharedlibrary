@@ -1,8 +1,7 @@
 def call(JSON){
 def jsonString = JSON
-//println(jsonString)
 def jsonObj = readJSON text: jsonString
-//println(jsonObj.brm)
+println(jsonObj.brm)
 
 String a=jsonObj.brm.password.fileName
 String fn=a.replaceAll("\\[", "").replaceAll("\\]","");
