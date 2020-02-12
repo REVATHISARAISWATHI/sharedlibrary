@@ -17,7 +17,7 @@ sh 'curl -s GET https://dev.azure.com/vickysastryvs/d2/_apis/wit/workitems?ids=1
 //influx()
  }catch(Exception e)
  {
-  println("Exception : "wrong details")
+  println("Exception : wrong info")
  }
   
 }
