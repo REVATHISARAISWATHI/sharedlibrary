@@ -1,12 +1,12 @@
-def call(JSON){
-def jsonString = JSON
+def call(){
+//def jsonString = JSON
 //println(jsonString)
-def jsonObj = readJSON text: jsonString
+//def jsonObj = readJSON text: jsonString
 //println(jsonObj.brm)
 
 //String a=jsonObj.data.name
 //String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.brm.repositories.repository.id
+//String b=jsonObj.brm.repositories.repository.id
 String repoid=b.replaceAll("\\[", "").replaceAll("\\]","");
     withCredentials([usernamePassword(credentialsId: 'nexus_cred', passwordVariable: 'password', usernameVariable:'username')]) {
 
