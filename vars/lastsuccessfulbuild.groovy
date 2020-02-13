@@ -4,6 +4,5 @@ def jsonObj = readJSON text: jsonString
 
 String a=jsonObj.ci1.jobs.job.job_name
 String jname=a.replaceAll("\\[", "").replaceAll("\\]","");
-  def build= sh 'curl -s http://18.188.152.185:8080/job/'${jname}'/lastSuccessfulBuild/api/json --user vj:11e428e94b267ffbab27fa713e2da8e6e8 -o ouput.json'
-  println(build)
+   sh 'curl -s http://18.188.152.185:8080/job/'${jname}'/lastSuccessfulBuild/api/json --user vj:11e428e94b267ffbab27fa713e2da8e6e8 -o ouput.json'
 }
