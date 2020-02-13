@@ -1,5 +1,8 @@
-def call(){
+def call(JSON){
+def jsonString = JSON
+def jsonObj = readJSON text: jsonString
 
-def build=sh "curl -s http://18.188.152.185:8080/job/bamboo1/lastFailedBuild/api/json --user vj:11e428e94b267ffbab27fa713e2da8e6e8 -o output.json"
-println(build)
+String a=jsonObj.ci1.jobs.job.job_name
+String jname=a.replaceAll("\\[", "").replaceAll("\\]","");
+  sh "curl -s http://18.188.152.185:8080/job/${jname}/lastFailedBuild/api/json --user vj:11e428e94b267ffbab27fa713e2da8e6e8 -o output.json"
 }
