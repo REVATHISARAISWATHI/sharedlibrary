@@ -24,6 +24,6 @@ if(response == "204" || response == "200")
 }
 else
 {
- error("Error while pushing")
+ echo "Error while pushing"
 }
  }
