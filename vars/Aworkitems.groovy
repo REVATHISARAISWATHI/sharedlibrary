@@ -13,8 +13,22 @@ sh """curl -i -XPOST 'http://ec2-13-58-47-71.us-east-2.compute.amazonaws.com:808
 def call()
 {
  try{
-sh 'curl -s GET https://dev.azure.com/vickysastryvs/d2/_apis/wit/workitems?ids=1,4,3 --user vickysastry.vs@outlook.com:zsxapkj3zwk6rtz7zm4tyli7ayk7yt5yehp5ic7erlec4xsf7tya  -o ouput.json'
+  
+sh 'curl -s GET https://dev.azure.com/vickysastryvs/d2/_apis/wit/workitems?ids=1,4,3 --user vickysastry.vs@outlook.com:zsxapkj3zwk6rtz7zm4tyli7ayk7yt5yehp5ic7erlec4xsf7tya  -o ouput.json' >test.txt
 //influx()
+  def response =new File('/var/lib/jenkins/workspace/' +JOB_NAME + '/test.txt').text
+
+ 
+ echo " ++++++++++++ $response "
+
+if(response == "204" || response == "200")
+{
+ echo " Data pushed into influxDB "
+}
+else
+{
+ error("Error while pushing")
+}
  }catch(Exception e)
  {
   println("Exception : url error")
