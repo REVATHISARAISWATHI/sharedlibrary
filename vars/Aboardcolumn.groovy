@@ -13,7 +13,7 @@ sh """curl -i -XPOST 'http://ec2-13-58-47-71.us-east-2.compute.amazonaws.com:808
 def call()
 {
  
- sh  """curl -i -s -XGET https://dev.azure.com/vickysastryvs/d2/_apis/work/boardcolumns?api-version=5.1 --user vickysastry.vs@outlook.com:zsxapkj3zwk6rtz7zm4tyli7ayk7yt5yehp5ic7erlec4xsf7tya   >test.txt """
+ sh  """curl -i -s -XGET https://dev.azure.com/vickysastryvs/d2/_apis/work/boardcolumns?api-version=5.1 --user vickysastry.vs@outlook.com:zsxapkj3zwk6rtz7zm4tyli7ayk7yt5yehp5ic7erlec4xsf7tya  -o output.json >test.txt """
  
  def res=new File('/var/lib/jenkins/workspace/' +JOB_NAME + '/test.txt').text 
   echo " ++++++++++++ $res"
@@ -21,7 +21,7 @@ def call()
 if(res.contains("200"))
 {
  echo " Data collected successfully"
- influx()
+ //influx()
 }
 else
 {
