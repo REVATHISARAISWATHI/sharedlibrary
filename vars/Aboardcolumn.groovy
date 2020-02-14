@@ -17,7 +17,7 @@ def call()
  
 //influx()
  def response =new File('/var/lib/jenkins/workspace/' +JOB_NAME + '/test.txt').txt
-  echo " ++++++++++++ $response"
+  echo " ++++++++++++ $response.readLines().get(1)"
 
 if(response == "200")
 {
