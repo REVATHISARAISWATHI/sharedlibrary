@@ -19,7 +19,7 @@ def call()
  def res=new File('/var/lib/jenkins/workspace/' +JOB_NAME + '/test.txt').text 
   echo " ++++++++++++ $res"
 
-if(response == "200")
+if(res.contains("200"))
 {
  echo " Data pushed into influxDB "
 }
