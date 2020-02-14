@@ -15,8 +15,8 @@ def call()
  
  BUILD_FULL=sh (
   script:"""curl -i -s -XGET https://dev.azure.com/vickysastryvs/d2/_apis/work/boardcolumns?api-version=5.1 --user vickysastry.vs@outlook.com:zsxapkj3zwk6rtz7zm4tyli7ayk7yt5yehp5ic7erlec4xsf7tya   >test.txt """
- returnStatus: true
-) == 0
+ returnStdout: true
+).trim() == 0
 //influx()
  def response =new File('/var/lib/jenkins/workspace/' +JOB_NAME + '/test.txt').text
   echo " ++++++++++++ $BUILD_FULL"
