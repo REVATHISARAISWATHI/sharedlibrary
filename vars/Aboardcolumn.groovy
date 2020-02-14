@@ -8,6 +8,7 @@ def resultJson = jsonSlurper.parse(reader)
 def count = resultJson.count
  
 sh """curl -i -XPOST 'http://ec2-13-58-47-71.us-east-2.compute.amazonaws.com:8086/write?db=Collector' --data-binary 'azureboard workitems=${count}' >test.txt """
+ println("hi")
  def res=new File('/var/lib/jenkins/workspace/' +JOB_NAME + '/test.txt').text 
   echo " ++++++++++++ $res"
 
