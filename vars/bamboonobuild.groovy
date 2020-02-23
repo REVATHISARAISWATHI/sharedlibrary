@@ -20,8 +20,25 @@ println(nobuild)
    // println(val[1])
    //def val1=val[1]
      //println(val1)
-     def res = val[1].split(' ')
-    println(res[3])
+     def vals = val[1].split(' ')
+    def totalbuild=vals[3]
+    println(totalbuild)
+    sh """curl -X GET \
+  'http://18.220.143.53:8085/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfFailures&buildKeys=LAT-WEB&groupByPeriod=YEAR&dateFilter=RANGE&dateFrom=22%2F2%2F2020&dateTo=23%2F2%2F2020' \
+  -H 'authorization: Basic cmlnOnJpZ2FEYXB0QGRldk9wcw==' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 54f9ea34-9831-be64-6e71-45f1e893f2eb'  -o ouput.json
+  """
+    def jsonSlurper = new JsonSlurper()
+def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
+def resultJson = jsonSlurper.parse(reader)
+    def nbuild=resultJson.imageMap
+      def val = nobuild.split('title=\"')
+     def builds = val[1].split(' ')
+    def Failbuild=builds[3]
+    println(Failbuild)
+    def successbuild=totalbuild-Failbuild
+     println(successbuild)
   }
   else
   {
