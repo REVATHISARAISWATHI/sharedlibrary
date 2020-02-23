@@ -14,7 +14,7 @@ def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/
 def resultJson = jsonSlurper.parse(reader)
 def nobuild=resultJson.imageMap
 println(nobuild)
-  if(nobuild!="null")
+  if(nobuild!=null)
   {
     def val = nobuild.split('title=\"')
    // println(val[1])
