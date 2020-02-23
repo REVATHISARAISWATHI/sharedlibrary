@@ -13,8 +13,8 @@ def state=resultJson.state
     println(user)
     //String res = user.substring(3, user.indexOf(' '))
     def val = user.split('>')
-    def str=val[1]
-     def vals = str.split('<')
+    //def str=val[1]
+     def vals = val[1].split('<')
      println(vals[0])
     
   }
