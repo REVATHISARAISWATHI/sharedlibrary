@@ -1,6 +1,6 @@
 import groovy.json.*
 @NonCPS
-def success()
+def success(totalbuilds)
 {
    sh """curl -X GET \
   'http://18.220.143.53:8085/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfFailures&buildKeys=LAT-WEB&groupByPeriod=YEAR&dateFilter=RANGE&dateFrom=22%2F2%2F2020&dateTo=23%2F2%2F2020' \
@@ -16,7 +16,7 @@ def resultJson = jsonSlurper.parse(reader)
      def builds = val2[1].split(' ')
     def Failbuild=builds[3]
     println(Failbuild)
-    def successbuild=totalbuild-Failbuild
+    def successbuild=totalbuilds-Failbuild
      println(successbuild)
 }
 def call(IP)
