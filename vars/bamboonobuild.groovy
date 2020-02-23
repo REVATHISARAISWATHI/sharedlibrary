@@ -1,5 +1,6 @@
 import groovy.json.*
 
+int totalbuilds;
 
 def call(IP)
 {
