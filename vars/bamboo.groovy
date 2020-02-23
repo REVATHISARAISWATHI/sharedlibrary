@@ -14,6 +14,9 @@ def state=resultJson.state
     //String res = user.substring(3, user.indexOf(' '))
     def val = user.split('>')
     println(val[1])
-    String res = val[1].substring(0, user.indexOf(' '))
+    def str=val[1]
+     def vals = str.split('<')
+     println(vals[0])
+    //String res = val[1].substring(0, user.indexOf(' '))
   }
 }
