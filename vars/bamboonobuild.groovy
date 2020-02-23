@@ -1,7 +1,7 @@
 import groovy.json.*
 def call(IP)
 {
-  sh "curl -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfBuilds&buildKeys=LAT-WEB&groupByPeriod=YEAR&dateFilter=RANGE&dateFrom=22%2F2%2F2020&dateTo=23%2F2%2F2020  -o  ouput.json"
+  sh "curl -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfBuilds%26buildKeys=LAT-WEB%26groupByPeriod=YEAR%26dateFilter=RANGE%26dateFrom=22%2F2%2F2020%26dateTo=23%2F2%2F2020  -o  ouput.json"
 /* sh """ curl -X GET \
   '${IP}/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfBuilds&buildKeys=LAT-WEB&groupByPeriod=YEAR&dateFilter=RANGE&dateFrom=22%2F2%2F2020&dateTo=23%2F2%2F2020' \
   -H 'authorization: Basic cmlnOnJpZ2FEYXB0QGRldk9wcw==' \
