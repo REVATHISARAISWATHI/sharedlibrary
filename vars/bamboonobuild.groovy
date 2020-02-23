@@ -25,13 +25,15 @@ println(nobuild)
      def vals = val[1].split(' ')
     def totalbuild=vals[3]
     println(totalbuild)
-   success(totalbuild)
+   success(totalbuild);
   }
   else
     
     echo "the no of build is 0" 
  
 }
+
+
 @NonCPS
 def success(totalbuilds)
 {
