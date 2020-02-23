@@ -18,9 +18,9 @@ println(nobuild)
   {
     def val = nobuild.split('title=\"')
    // println(val[1])
-   // def val1=val[1]
+   def val1=val[1]
      //println(val1)
-     String res = val[1].split(' ')
+     String res = val1.split(' ')
     println(res[3])
   }
   else
