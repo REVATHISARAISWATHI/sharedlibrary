@@ -18,6 +18,8 @@ println(nobuild)
   {
     def val = nobuild.split('title=\"')
     println(val[1])
+    def val1=val[1]
+     println(val1)
   }
   else
   {
