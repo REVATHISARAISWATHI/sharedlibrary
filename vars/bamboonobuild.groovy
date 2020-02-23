@@ -6,7 +6,7 @@ def call(IP)
   '${IP}/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfBuilds&buildKeys=LAT-WEB&groupByPeriod=YEAR&dateFilter=RANGE&dateFrom=22%2F2%2F2020&dateTo=23%2F2%2F2020' \
   -H 'authorization: Basic cmlnOnJpZ2FEYXB0QGRldk9wcw==' \
   -H 'cache-control: no-cache' \
-  -H 'postman-token: ad68a811-ecd6-864c-2685-5f8c15a81cc3' \ -o ouput.json
+  -H 'postman-token: ad68a811-ecd6-864c-2685-5f8c15a81cc3'  -o ouput.json
   """
  
  def jsonSlurper = new JsonSlurper()
