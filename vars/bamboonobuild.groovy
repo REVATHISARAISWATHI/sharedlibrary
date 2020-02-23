@@ -1,7 +1,7 @@
 import groovy.json.*
 def call(IP)
 {
-  sh "curl -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/chart.json?reportKey%3Dcom.atlassian.bamboo.plugin.system.reports%3AnumberOfBuilds&buildKeys%3DLAT-WEB&groupByPeriod%3DYEAR&dateFilter%3DRANGE&dateFrom%3D22%2F2%2F2020&dateTo%3D23%2F2%2F2020  -o  ouput.json"
+  sh "curl -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/chart.json?reportKey%3Dcom.atlassian.bamboo.plugin.system.reports%3AnumberOfBuilds%26buildKeys%3DLAT-WEB%26groupByPeriod%3DYEAR%26dateFilter%3DRANGE%26dateFrom%3D22%2F2%2F2020&dateTo%3D23%2F2%2F2020  -o  ouput.json"
   
  
  def jsonSlurper = new JsonSlurper()
