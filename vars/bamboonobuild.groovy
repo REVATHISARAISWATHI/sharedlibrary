@@ -21,8 +21,8 @@ println(nobuild)
   }
   else
   {
-    def count=0
-    println("the no of build is" count)
+    
+    echo "the no of build is 0" 
   }
  
 }
