@@ -29,12 +29,12 @@ println(nobuild)
   -H 'cache-control: no-cache' \
   -H 'postman-token: 54f9ea34-9831-be64-6e71-45f1e893f2eb'  -o ouput.json
   """
-    def jsonSlurper = new JsonSlurper()
-def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
-def resultJson = jsonSlurper.parse(reader)
-    def nbuild=resultJson.imageMap
-      def val = nobuild.split('title=\"')
-     def builds = val[1].split(' ')
+    def jsonSlurper1 = new JsonSlurper()
+def reader1 = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
+def resultJson1 = jsonSlurper1.parse(reader)
+    def nbuild=resultJson1.imageMap
+      def val2 = nobuild.split('title=\"')
+     def builds = val2[1].split(' ')
     def Failbuild=builds[3]
     println(Failbuild)
     def successbuild=totalbuild-Failbuild
