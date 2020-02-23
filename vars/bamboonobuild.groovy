@@ -21,7 +21,7 @@ println(nobuild)
    def val1=val[1]
      //println(val1)
      def res = val1.split(' ')
-    println(res[0])
+    println(res[3])
   }
   else
   {
