@@ -1,5 +1,5 @@
 import groovy.json.*
-  @NonCPS
+@NonCPS
 success()
 {
    sh """curl -X GET \
