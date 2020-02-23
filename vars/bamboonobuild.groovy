@@ -17,7 +17,7 @@ println(nobuild)
   if(nobuild!="null")
   {
     def val = nobuild.split('title=\"')
-    println(val[0])
+    println(val[1])
   }
   else
   {
