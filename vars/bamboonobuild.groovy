@@ -31,7 +31,7 @@ println(nobuild)
   """
     def jsonSlurper1 = new JsonSlurper()
 def reader1 = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
-def resultJson1 = jsonSlurper1.parse(reader)
+def resultJson1 = jsonSlurper1.parse(reader1)
     def nbuild=resultJson1.imageMap
       def val2 = nobuild.split('title=\"')
      def builds = val2[1].split(' ')
