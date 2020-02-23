@@ -43,7 +43,7 @@ println(nobuild)
      def vals = val[1].split(' ')
     def totalbuild=vals[3]
     println(totalbuild)
-   success()
+   success(totalbuild);
   }
   else
   {
