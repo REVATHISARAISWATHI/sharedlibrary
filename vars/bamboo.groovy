@@ -11,7 +11,7 @@ def state=resultJson.state
   {
     def user=resultJson.buildReason
     println(user)
-    String res = user.substring(0, user.indexOf(' '))
+    String res = user.substring(3, user.indexOf(' '))
     println(res)
   }
 }
