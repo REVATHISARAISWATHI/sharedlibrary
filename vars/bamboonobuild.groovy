@@ -20,8 +20,8 @@ println(nobuild)
    // println(val[1])
    // def val1=val[1]
      //println(val1)
-     String res = val[1].substring(3, user.indexOf(' '))
-    println(val1)
+     String res = val[1].split(' ')
+    println(res[3])
   }
   else
   {
