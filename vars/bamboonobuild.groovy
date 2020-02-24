@@ -17,7 +17,7 @@ def bamboo(IP)
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 def nobuild=resultJson.imageMap
-  env.name = nobuild
+ // env.name = nobuild
 
 println(nobuild)
   if(nobuild!=null)
@@ -29,15 +29,19 @@ println(nobuild)
      def vals = val[1].split(' ')
     def totalbuild=vals[3]
     println(totalbuild)
-   success(totalbuild);
+  // success(totalbuild);
+    return totalbuild
   }
   else
+  {
     
     echo "the no of build is 0" 
+    return 0
+  }
  
 }
-@NonCPS
-def success(totalbuilds)
+
+def success(totalbuild)
 {
    sh """curl -X GET \
   'http://18.220.143.53:8085/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfFailures&buildKeys=LAT-WEB&groupByPeriod=YEAR&dateFilter=RANGE&dateFrom=22%2F2%2F2020&dateTo=23%2F2%2F2020' \
