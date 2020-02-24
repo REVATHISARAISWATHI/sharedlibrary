@@ -7,7 +7,7 @@ def call(IP)
 def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
-def state=resultJson.results.result[0].buildResultKey
+def state=resultJson.results.result[0].buildStartedTime
   println(state)
  /* for(i=0;i<50;i++)
   {
