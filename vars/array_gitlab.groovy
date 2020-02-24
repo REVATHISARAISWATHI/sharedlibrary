@@ -6,6 +6,7 @@ def call(IP)
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
   def size = resultJson.size()
+  println(size)
   for(i=0;i<size;i++){
 def uname=resultJson[i].name
   println(uname)
