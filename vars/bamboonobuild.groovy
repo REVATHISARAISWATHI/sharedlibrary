@@ -55,8 +55,9 @@ def resultJson = jsonSlurper.parse(reader)
     def nbuild=resultJson.imageMap
       def val2 = nbuild.split('title=\"')
      def builds = val2[1].split(' ')
-    def Failbuild=builds[3]
+    def Failbuild=builds[2]
     println(Failbuild)
-    def successbuild=totalbuilds-Failbuild
+  println(totalbuilds)
+  def successbuild=${totalbuilds}-Failbuild
      println(successbuild)
 }
