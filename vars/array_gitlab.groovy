@@ -5,8 +5,12 @@ def call(IP)
   def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
-def arr=resultJson[0].name
-println(arr)
+  def size = resultJson.size()
+  
+def uname=resultJson[0].name
+  println(uname)
+def commit=resultJson[0].commits
+println(commit)
   //ef val=arr  { reg
   //println(val)
 }
