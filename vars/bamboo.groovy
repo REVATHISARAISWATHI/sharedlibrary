@@ -31,11 +31,12 @@ def state=resultJson.results.result[i].buildState
      def vals = val[1].split('<')
      def username=vals[0].split(' ')
      println(username[0])*/
-  def success=cnt++
+  cnt++
     
   }
    // else
      // break;
   }
- println(success)
+ println(cnt)
+ echo "$cnt"
 }
