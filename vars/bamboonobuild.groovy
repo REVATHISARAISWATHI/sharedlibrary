@@ -53,7 +53,7 @@ def success(totalbuild)
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
     def nbuild=resultJson.imageMap
-      def val2 = nobuild.split('title=\"')
+      def val2 = nbuild.split('title=\"')
      def builds = val2[1].split(' ')
     def Failbuild=builds[3]
     println(Failbuild)
