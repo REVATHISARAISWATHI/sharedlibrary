@@ -7,4 +7,6 @@ def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/
 def resultJson = jsonSlurper.parse(reader)
 def arr=resultJson[0]
 println(arr)
+  def val=arr  { reg
+  println(val)
 }
