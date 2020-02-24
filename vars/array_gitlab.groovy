@@ -1,5 +1,5 @@
 import groovy.json.*
-def call(IP)
+def call()
 {
   sh "curl -X GET -s -u Priyakumar:pri4jay16 https://gitlab.com/api/v4/projects/17097955/repository/commits -o ouput.json"
   def jsonSlurper = new JsonSlurper()
