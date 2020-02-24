@@ -37,5 +37,5 @@ def state=resultJson.results.result[i].buildState
    // else
      // break;
   }
- println(cnt)
+ println(success)
 }
