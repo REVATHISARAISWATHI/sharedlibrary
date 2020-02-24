@@ -17,8 +17,11 @@ def resultJson = jsonSlurper.parse(reader)
   for(i=0;i<50;i++)
   {
    def date=resultJson.results.result[i].buildCompletedDate
+   println(date)
 def state=resultJson.results.result[i].buildState
-  if((state.equals("Successful"))&&(date.equals("2020-02-24")))
+   println(state)
+   
+  //if((state.equals("Successful"))&&(date.equals("2020-02-24")))
   {
    // def user=resultJson.buildReason
    // println(user)
