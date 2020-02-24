@@ -8,10 +8,10 @@ def resultJson = jsonSlurper.parse(reader)
   def size = resultJson.size()
   println(size)
   for(i=0;i<size;i++){
-def uname=resultJson[i].name
+def uname=resultJson[i].committer_name
   println(uname)
-def commit=resultJson[i].commits
-println(commit)
+//def commit=resultJson[i].commits
+//println(commit)
   }
   //ef val=arr  { reg
   //println(val)
