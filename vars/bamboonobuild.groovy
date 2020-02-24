@@ -41,7 +41,7 @@ println(nobuild)
  
 }
 
-def success(totalbuild)
+def success(totalbuilds)
 {
    sh """curl -X GET \
   'http://18.220.143.53:8085/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfFailures&buildKeys=LAT-WEB&groupByPeriod=YEAR&dateFilter=RANGE&dateFrom=22%2F2%2F2020&dateTo=23%2F2%2F2020' \
