@@ -1,13 +1,17 @@
 import groovy.json.*
 def call(IP)
 {
-  sh "curl -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/result/LAT-WEB-145.json?buildstate -o ouput.json"
+  sh "curl -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/result/LAT-WEB.json?max-result=50&expand=results.result.artifacts&expand=changes.change.files&start-index=0 -o ouput.json"
  def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
-def state=resultJson.state
+def state=resultJson.result[0].buildCompletedDate
   println(state)
-  if(state.equals("Successful"))
+ /* for(i=0;i<50;i++)
+  {
+    def state=resultJson.result[0].buildCompletedDate
+
+  if(state.equals("2020-02-24"))
   {
     def user=resultJson.buildReason
     println(user)
@@ -19,4 +23,7 @@ def state=resultJson.state
      println(username[0])
     
   }
+    else
+      break;
+  }*/
 }
