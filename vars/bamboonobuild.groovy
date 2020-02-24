@@ -2,6 +2,7 @@ import groovy.json.*
 
 int totalbuilds;
 
+@NonCPS
 def bamboo(IP)
 {
   //sh "curl -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/chart.json?reportKey=com.atlassian.bamboo.plugin.system.reports%3AnumberOfBuilds%26buildKeys=LAT-WEB%26groupByPeriod=YEAR%26dateFilter=RANGE%26dateFrom=22%2F2%2F2020%26dateTo=23%2F2%2F2020  -o  ouput.json"
@@ -36,8 +37,6 @@ println(nobuild)
  
 }
 
-
-@NonCPS
 def success(totalbuilds)
 {
    sh """curl -X GET \
