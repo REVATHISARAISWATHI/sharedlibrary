@@ -10,8 +10,8 @@ def resultJson = jsonSlurper.parse(reader)
   for(i=0;i<size;i++){
 def uname=resultJson[i].committer_name
   println(uname)
-//def commit=resultJson[i].commits
-//println(commit)
+def commit=resultJson[i].committed_date
+println(commit)
   }
   //ef val=arr  { reg
   //println(val)
