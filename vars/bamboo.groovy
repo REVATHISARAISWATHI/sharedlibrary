@@ -34,8 +34,8 @@ def state=resultJson.results.result[i].buildState
    cnt++
     
   }
-    else
-      break;
+   // else
+     // break;
   }
  println(cnt)
 }
