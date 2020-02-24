@@ -3,9 +3,9 @@ def call(IP)
 {
  
 
-  sh """curl -X GET -s -u rig:rigaDapt@devOps '${IP}/rest/api/latest/result/LAT-WEB.json?max-result=50&expand=results.result.artifacts&expand=changes.change.files&start-index=0'  """
+  sh """curl -X GET -s -u rig:rigaDapt@devOps '${IP}/rest/api/latest/result/LAT-WEB.json?max-result=50&expand=results.result.artifacts&expand=changes.change.files&start-index=0'  -o output.json"""
 def jsonSlurper = new JsonSlurper()
-def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
+def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 def state=resultJson.result[0].buildCompletedDate
   println(state)
