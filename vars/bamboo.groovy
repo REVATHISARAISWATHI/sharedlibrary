@@ -15,7 +15,8 @@ def state=resultJson.state
     def val = user.split('>')
     //def str=val[1]
      def vals = val[1].split('<')
-     println(vals[0])
+     def username=vals.split(' ')
+     println(username[0])
     
   }
 }
