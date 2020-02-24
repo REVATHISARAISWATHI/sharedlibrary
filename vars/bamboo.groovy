@@ -12,7 +12,7 @@ def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 //def state=resultJson.results.result[0].buildCompletedDate
-  println(state)
+  //println(state)
  def cnt=0
   for(i=0;i<50;i++)
   {
@@ -21,7 +21,7 @@ def resultJson = jsonSlurper.parse(reader)
 def state=resultJson.results.result[i].buildState
    println(state)
    
-  //if((state.equals("Successful"))&&(date.equals("2020-02-24")))
+  if((state.equals("Successful"))&&(date.equals("2020-02-24")))
   {
    // def user=resultJson.buildReason
    // println(user)
