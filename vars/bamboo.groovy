@@ -11,25 +11,28 @@ def call(IP)
 def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
-def state=resultJson.results.result[0].buildStartedTime
+//def state=resultJson.results.result[0].buildCompletedDate
   println(state)
- /* for(i=0;i<50;i++)
+ def cnt=0
+  for(i=0;i<50;i++)
   {
-    def state=resultJson.result.buildCompletedDate
-
-  if(state.equals("2020-02-24"))
+   def date=resultJson.results.result[0].buildCompletedDate
+def state=resultJson.results.result[0].buildState
+  if((state.equals("Successful"))&&(("2020-02-24")))
   {
-    def user=resultJson.buildReason
-    println(user)
+   // def user=resultJson.buildReason
+   // println(user)
     //String res = user.substring(3, user.indexOf(' '))
-    def val = user.split('>')
+   /* def val = user.split('>')
     //def str=val[1]
      def vals = val[1].split('<')
      def username=vals[0].split(' ')
-     println(username[0])
+     println(username[0])*/
+   cnt++
     
   }
     else
       break;
-  }*/
+  }
+ println(cnt)
 }
