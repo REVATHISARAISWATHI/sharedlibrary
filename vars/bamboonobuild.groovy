@@ -58,7 +58,7 @@ def resultJson = jsonSlurper.parse(reader)
     def Failbuild=builds[2]
     println(Failbuild)
   println(totalbuilds)
-  def var=${totalbuilds}
+  def var="${totalbuilds}"
   def successbuild=var-Failbuild
      println(successbuild)
 }
