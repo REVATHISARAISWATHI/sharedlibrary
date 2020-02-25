@@ -50,7 +50,7 @@ file.write(json_beauty)*/
       //def jsonString = JSON
    //def jsonObj = readJSON text: JSON
  
-   println(JSON)
+   //println(JSON)
 
   // println(JsonOutput.toJson(resultJson.results.result[0]))
    //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} > bam.json"
@@ -60,6 +60,6 @@ file.write(json_beauty)*/
      // break;
   }
  println(cnt)
- println(jsonObj)
+ println(JSON)
  //echo "$cnt"
 }
