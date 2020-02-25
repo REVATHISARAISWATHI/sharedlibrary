@@ -34,7 +34,7 @@ def state=resultJson.results.result[i].buildState
    //echo "hi"
   cnt++
    println(JsonOutput.toJson(resultJson.results.result[0]))
-   sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} >>success.json"
+   sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} -o bam.json"
     
   }
    // else
