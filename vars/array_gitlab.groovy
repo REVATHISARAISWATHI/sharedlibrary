@@ -8,8 +8,8 @@ def resultJson = jsonSlurper.parse(reader)
   def size = resultJson.size()
   println(size)
   for(i=0;i<size;i++){
-def list[i]=resultJson[i].committer_name
-  println(list[i])
+//def list[i]=resultJson[i].committer_name
+  //println(list[i])
 def commit=resultJson[i].committed_date
 println(commit)
   }
