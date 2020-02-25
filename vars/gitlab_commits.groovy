@@ -9,7 +9,7 @@ println("No of users "+ ecount)
  
 // withCredentials([usernamePassword(credentialsId: 'bitbucket_cred', passwordVariable: 'pass', usernameVariable: 'userId')]) {
 sh "curl -X GET  -H -d  -u Priyakumar:pri4jay16 https://gitlab.com/api/v4/projects/17097955/repository/commits -o output.json" 
- } 
+ //} 
 def jsonSlurper = new JsonSlurper()
 def resultJson = jsonSlurper.parse(new File("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"))
 def total = resultJson.size
