@@ -41,10 +41,14 @@ def state=resultJson.results.result[i].buildState
    //JSONObject obj=new JSONObject(output.json); 
    //JSONArray success=obj.getJSONArray(resultJson.results.result[i]);
   // println(success)
-   def json_str = JsonOutput.toJson(resultJson.results.result[i])
+ /*  def json_str = JsonOutput.toJson(resultJson.results.result[i])
 def json_beauty = JsonOutput.prettyPrint(json_str)
 File file = new File(filename)
-file.write(json_beauty)
+file.write(json_beauty)*/
+   def jsonString = JsonOutput.toJson(resultJson.results.result[i])
+def jsonObj = readJSON text: jsonString
+   println(jsonobj)
+
   // println(JsonOutput.toJson(resultJson.results.result[0]))
    //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} > bam.json"
     
