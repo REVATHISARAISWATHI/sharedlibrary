@@ -12,15 +12,17 @@ def resultJson = jsonSlurper.parse(reader)
 println(resultJson[i])
    /*commit[i]=resultJson[i].author_email
     println(commit[i])*/
-     def count = new String[100]
+     List<String> commit=new ArrayList<String>();
    for(int j=0;j<size;j++)
     {
-      count[j]=0
+      /*count[j]=0
    for(int i=0;i<size;i++){
       //if((resultJson.commit.author.name[i]).equals( collab[j] ))
          if((resultJson.commit.author.name[i]).equals( collab[j] ))
      count[j]++
-       println(count)
+       println(count)*/
+      if(author_email[j].equals(priyamk061998@gmail.com))
+      commit.add(JsonOutput.toJson(resultJson.commit.author_email[j]))
          }
          } 
       
