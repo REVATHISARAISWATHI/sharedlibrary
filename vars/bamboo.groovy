@@ -17,6 +17,8 @@ def resultJson = jsonSlurper.parse(reader)
 //def state=resultJson.results.result[0].buildCompletedDate
   //println(state)
  def cnt=0
+    List<String> JSON = new ArrayList<String>();
+
   for(i=0;i<50;i++)
   {
    def date=resultJson.results.result[i].buildCompletedDate
@@ -45,7 +47,7 @@ def state=resultJson.results.result[i].buildState
 def json_beauty = JsonOutput.prettyPrint(json_str)
 File file = new File(filename)
 file.write(json_beauty)*/
-   List<String> JSON = new ArrayList<String>();
+   //List<String> JSON = new ArrayList<String>();
    JSON.add(JsonOutput.toJson(resultJson.results.result[i]))
       //def jsonString = JSON
    //def jsonObj = readJSON text: JSON
