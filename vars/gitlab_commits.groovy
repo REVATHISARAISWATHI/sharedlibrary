@@ -7,4 +7,7 @@ def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/
 def resultJson = jsonSlurper.parse(reader)
   def size = resultJson.size()
   println(size)
+  for(i=0;i<size;i++){
+    def commit=resultJson[i].author_email
+println(commit)
   }
