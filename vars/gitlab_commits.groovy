@@ -8,11 +8,19 @@ def resultJson = jsonSlurper.parse(reader)
   def size = resultJson.size()
   println(size)
   for(i=0;i<size;i++){
-    def commit=resultJson[i].author_email
-println(commit)
-   commit[i]=resultJson[i].author_email
+    //def commit=resultJson[i].author_email
+println(resultJson[i])
+   /*commit[i]=resultJson[i].author_email
     println(commit[i])
-    
+     def count = new String[100]
+   for(int j=0;j<result1;j++)
+    {
+      count[j]=0
+   for(int i=0;i<result;i++){
+      if((resultJson.commit.author.name[i]).equals( collab[j] ))
+         count[j]++
+         }
+         } */
       
     
     
