@@ -38,9 +38,9 @@ List<String> JSON = new ArrayList<String>();
 	 // sh "echo contributorsName :'${name}', contributorsEmail :'${email}' >>commiter'${commiter}'.txt "
          
 	
-   }*/
+   }
 	
-  }
+  }*/
  
 /*
 def jsonSlurper = new JsonSlurper()
