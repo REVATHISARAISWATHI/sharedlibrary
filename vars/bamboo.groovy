@@ -47,8 +47,10 @@ File file = new File(filename)
 file.write(json_beauty)*/
    List<String> JSON = new ArrayList<String>();
    JSON.add(JsonOutput.toJson(resultJson.results.result[i]))
+      def jsonString = JSON
+   def jsonObj = readJSON text: jsonString
  
-   //println(jsonObj)
+   println(jsonObj)
 
   // println(JsonOutput.toJson(resultJson.results.result[0]))
    //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} > bam.json"
@@ -58,8 +60,6 @@ file.write(json_beauty)*/
      // break;
   }
  println(cnt)
-   def jsonString = JSON
-   def jsonObj = readJSON text: jsonString
  println(jsonObj)
  //echo "$cnt"
 }
