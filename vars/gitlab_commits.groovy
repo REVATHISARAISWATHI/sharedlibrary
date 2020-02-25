@@ -13,10 +13,8 @@ println(commit)
     def collab = new String[100]
    for(int i=0;i<=result1;i++)
    //for i in 1 2 
-   
-      do
-      collab[i]=resultJson[i].login
-      println(collab[i])
+    collab[i]=resultJson[i].login
+    println(collab[i])
       
     
     
