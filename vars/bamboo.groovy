@@ -21,7 +21,7 @@ def resultJson = jsonSlurper.parse(reader)
 def state=resultJson.results.result[i].buildState
   // println(state)
    
-  if((state.equals("Successful"))&&(date.contains("2020-02-22")))
+  if((state.equals("Successful")))
   {
    // def user=resultJson.buildReason
    // println(user)
@@ -33,6 +33,7 @@ def state=resultJson.results.result[i].buildState
      println(username[0])*/
    //echo "hi"
   cnt++
+   sh "echo ${resultJson.results.result[i]} ">>success.json
     
   }
    // else
