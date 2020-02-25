@@ -10,11 +10,11 @@ def resultJson = jsonSlurper.parse(reader)
   for(i=0;i<size;i++){
     def commit=resultJson[i].author_email
 println(commit)
-    def collab = new String[100]
+   /* def collab = new String[100]
    for(int i=0;i<=size;i++)
    //for i in 1 2 
     collab[i]=resultJson[i].author_email
-    println(collab[i])
+    println(collab[i])*/
     
       
     
