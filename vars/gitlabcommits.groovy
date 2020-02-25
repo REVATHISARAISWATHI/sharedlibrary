@@ -10,8 +10,6 @@ def resultJson = jsonSlurper.parse(reader)
 def projId = resultJson.id*/
  
 sh "curl -X GET  -H -d  -u Priyakumar:pri4jay16 https://gitlab.com/api/v4/projects/17097955/repository/commits -o output.json"
-
-
 }
 
 def call()
