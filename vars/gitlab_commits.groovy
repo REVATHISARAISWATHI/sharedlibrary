@@ -25,7 +25,7 @@ for(i=0;i<ecount;i++)
   {
    if(jsonObj.config.emails.email[i]==resultJson[j].author_email)
    {
-	   JSON.add(JsonOutput.toJson(resultJson.values[j]))
+	   JSON.add(JsonOutput.toJson(resultJson[j]))
   //  y = resultJson.values[j];
     //echo "y >>commiter'${commiter}'.txt"
 	//   sh "echo '${y}' >>commiter'${commiter}'.json "
