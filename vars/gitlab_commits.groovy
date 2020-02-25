@@ -10,10 +10,8 @@ def resultJson = jsonSlurper.parse(reader)
   for(i=0;i<size;i++){
     def commit=resultJson[i].author_email
 println(commit)
-    
- 
-    collab[i]=resultJson[i].author_email
-    println(collab[i])
+   commit[i]=resultJson[i].author_email
+    println(commit[i])
     
       
     
