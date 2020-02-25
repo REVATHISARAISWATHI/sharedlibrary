@@ -11,3 +11,4 @@ def resultJson = jsonSlurper.parse(reader)
     def commit=resultJson[i].author_email
 println(commit)
   }
+}
