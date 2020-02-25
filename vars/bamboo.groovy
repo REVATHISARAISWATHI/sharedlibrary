@@ -16,8 +16,11 @@ def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/
 def resultJson = jsonSlurper.parse(reader)
 //def state=resultJson.results.result[0].buildCompletedDate
   //println(state)
- def cnt=0
-    List<String> JSON = new ArrayList<String>();
+ def cns=0
+ def cnf=0
+    List<String> SUCCESS = new ArrayList<String>();
+    List<String> FAILURE = new ArrayList<String>();
+
 
   for(i=0;i<50;i++)
   {
@@ -26,7 +29,7 @@ def resultJson = jsonSlurper.parse(reader)
 def state=resultJson.results.result[i].buildState
   // println(state)
    
-  if((state.equals("Successful")))
+  if(state.equals("Successful"))
   {
    // def user=resultJson.buildReason
    // println(user)
@@ -39,7 +42,7 @@ def state=resultJson.results.result[i].buildState
    //echo "hi"
    //filename = args[i]
 
-  cnt++
+  cns++
    //JSONObject obj=new JSONObject(output.json); 
    //JSONArray success=obj.getJSONArray(resultJson.results.result[i]);
   // println(success)
@@ -48,7 +51,7 @@ def json_beauty = JsonOutput.prettyPrint(json_str)
 File file = new File(filename)
 file.write(json_beauty)*/
    //List<String> JSON = new ArrayList<String>();
-   JSON.add(JsonOutput.toJson(resultJson.results.result[i]))
+   SUCCESS.add(JsonOutput.toJson(resultJson.results.result[i]))
       //def jsonString = JSON
    //def jsonObj = readJSON text: JSON
  
@@ -58,10 +61,16 @@ file.write(json_beauty)*/
    //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} > bam.json"
     
   }
-   // else
-     // break;
+   else if(state.equals("Failed"))
+   {
+    cnf++
+       FAILURE.add(JsonOutput.toJson(resultJson.results.result[i]))
+     
+   }
   }
- println(cnt)
- println(JSON)
+ //println(cnt)
+// println(Success)
+ println(cnf)
+ println(FAILURE)
  //echo "$cnt"
 }
