@@ -19,7 +19,7 @@ def commiter=1
 	println(comiter)
 List<String> JSON = new ArrayList<String>();
 
-/*for(i=0;i<ecount;i++)
+for(i=0;i<ecount;i++)
  {
   for(j=0;j<total;j++)
   {
@@ -40,7 +40,7 @@ List<String> JSON = new ArrayList<String>();
 	
    }
 	
-  }*/
+  }
  
 /*
 def jsonSlurper = new JsonSlurper()
