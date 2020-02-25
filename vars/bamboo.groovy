@@ -33,7 +33,7 @@ def state=resultJson.results.result[i].buildState
      println(username[0])*/
    //echo "hi"
   cnt++
-   println(JsonOutput.toJson(resultJson.results.result[i]))
+   println(resultJson.results.result[i])
    //sh "echo  ${JsonOutput.toJson(resultJson.results.result[i])} >>success.json"
     
   }
