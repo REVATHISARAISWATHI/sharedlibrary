@@ -45,7 +45,7 @@ def state=resultJson.results.result[i].buildState
 def json_beauty = JsonOutput.prettyPrint(json_str)
 File file = new File(filename)
 file.write(json_beauty)*/
-   def JSON = JsonOutput.toJson(resultJson.results.result[0])
+   def JSON = JsonOutput.toJson(resultJson.results.result[i])
    def jsonString = JSON
 def jsonObj = readJSON text: jsonString
    println(jsonObj)
