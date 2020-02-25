@@ -32,7 +32,7 @@ def state=resultJson.results.result[i].buildState
      def username=vals[0].split(' ')
      println(username[0])*/
    //echo "hi"
-   filename = args[i]
+   //filename = args[i]
 
   cnt++
    //JSONObject obj=new JSONObject(output.json); 
