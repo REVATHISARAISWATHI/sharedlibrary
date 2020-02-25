@@ -48,9 +48,9 @@ file.write(json_beauty)*/
    List<String> JSON = new ArrayList<String>();
    JSON.add(JsonOutput.toJson(resultJson.results.result[i]))
       //def jsonString = JSON
-   def jsonObj = readJSON text: JSON
+   //def jsonObj = readJSON text: JSON
  
-   println(jsonObj)
+   println(JSON)
 
   // println(JsonOutput.toJson(resultJson.results.result[0]))
    //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} > bam.json"
