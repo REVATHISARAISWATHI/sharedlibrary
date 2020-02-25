@@ -10,5 +10,15 @@ def resultJson = jsonSlurper.parse(reader)
   for(i=0;i<size;i++){
     def commit=resultJson[i].author_email
 println(commit)
+    def collab = new String[100]
+   //for(int i=0;i<=result1;i++)
+   for i in 1 2 
+   
+      do
+      collab[i]=resultJson[i].login
+      println(collab[i])
+      
+    
+    
   }
 }
