@@ -47,8 +47,8 @@ File file = new File(filename)
 file.write(json_beauty)*/
    List<String> JSON = new ArrayList<String>();
    JSON.add(JsonOutput.toJson(resultJson.results.result[i]))
-      def jsonString = JSON
-   def jsonObj = readJSON text: jsonString
+      //def jsonString = JSON
+   def jsonObj = readJSON text: JSON
  
    println(jsonObj)
 
