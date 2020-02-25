@@ -48,7 +48,7 @@ file.write(json_beauty)*/
    def JSON = JsonOutput.toJson(resultJson.results.result[0])
    def jsonString = JSON
 def jsonObj = readJSON text: jsonString
-   println(jsonobj)
+   println(jsonObj)
 
   // println(JsonOutput.toJson(resultJson.results.result[0]))
    //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} > bam.json"
