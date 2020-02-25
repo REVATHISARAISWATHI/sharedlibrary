@@ -15,8 +15,8 @@ def resultJson = jsonSlurper.parse(new File("/var/lib/jenkins/workspace/${JOB_NA
 def total = resultJson.size
 // echo "Total no.of commits in ${repoName} $total"
 def commiter=1
-	def comiter=resultJson[0].author_email
-	println(comiter)
+	//def comiter=resultJson[0].author_email
+	//println(comiter)
 List<String> JSON = new ArrayList<String>();
 
 for(i=0;i<ecount;i++)
