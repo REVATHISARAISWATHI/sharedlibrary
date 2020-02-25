@@ -32,12 +32,18 @@ def state=resultJson.results.result[i].buildState
      def username=vals[0].split(' ')
      println(username[0])*/
    //echo "hi"
+   filename = args[i]
+
   cnt++
    //JSONObject obj=new JSONObject(output.json); 
    //JSONArray success=obj.getJSONArray(resultJson.results.result[i]);
   // println(success)
-   println(JsonOutput.toJson(resultJson.results.result[0]))
-   sh "echo  ${[JsonOutput.toJson(resultJson.results.result[0])]} > bam.json"
+   def json_str = JsonOutput.toJson(resultJson.results.result[i])
+def json_beauty = JsonOutput.prettyPrint(json_str)
+File file = new File(filename)
+file.write(json_beauty)
+  // println(JsonOutput.toJson(resultJson.results.result[0]))
+   //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} > bam.json"
     
   }
    // else
