@@ -45,9 +45,9 @@ def state=resultJson.results.result[i].buildState
 def json_beauty = JsonOutput.prettyPrint(json_str)
 File file = new File(filename)
 file.write(json_beauty)*/
-   def JSON = JsonOutput.toJson(resultJson.results.result[i])
-   def jsonString = JSON
-def jsonObj = readJSON text: jsonString
+   List<String> JSON = new ArrayList<String>();
+   JSON.add(JsonOutput.toJson(resultJson.results.result[i]))
+ 
    //println(jsonObj)
 
   // println(JsonOutput.toJson(resultJson.results.result[0]))
@@ -58,6 +58,8 @@ def jsonObj = readJSON text: jsonString
      // break;
   }
  println(cnt)
+   def jsonString = JSON
+   def jsonObj = readJSON text: jsonString
  println(jsonObj)
  //echo "$cnt"
 }
