@@ -13,7 +13,7 @@ sh "curl -X GET  -H -d  -u Priyakumar:pri4jay16 https://gitlab.com/api/v4/projec
 def jsonSlurper = new JsonSlurper()
 def resultJson = jsonSlurper.parse(new File("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"))
 def total = resultJson.size
- echo "Total no.of commits in ${repoName} $total"
+// echo "Total no.of commits in ${repoName} $total"
 def commiter=1
 List<String> JSON = new ArrayList<String>();
 
