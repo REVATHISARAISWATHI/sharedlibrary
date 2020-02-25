@@ -33,11 +33,11 @@ def state=resultJson.results.result[i].buildState
      println(username[0])*/
    //echo "hi"
   cnt++
-   JSONObject obj=new JSONObject(output.json); 
-   JSONArray success=obj.getJSONArray(resultJson.results.result[i]);
-   println(success)
-   //println(JsonOutput.toJson(resultJson.results.result[0]))
-   //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} -o bam.json"
+   //JSONObject obj=new JSONObject(output.json); 
+   //JSONArray success=obj.getJSONArray(resultJson.results.result[i]);
+  // println(success)
+   println(JsonOutput.toJson(resultJson.results.result[0]))
+   sh "echo  ${[JsonOutput.toJson(resultJson.results.result[0])]} > bam.json"
     
   }
    // else
