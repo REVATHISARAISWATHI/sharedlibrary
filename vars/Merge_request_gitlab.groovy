@@ -28,7 +28,7 @@ def usertotal = resultJson.size()
 
    def commit(ids){
       withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
-         sh "curl -X GET -i -H  -d  -u $username:$password https://gitlab.com/api/v4/projects/${id1}/merge_requests -o output.json"
+         sh "curl -X GET -i -H  -d  -u $username:$password https://gitlab.com/api/v4/projects/${ids}/merge_requests -o output.json"
       }
    def jsonSlurper = new JsonSlurper()
    def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
