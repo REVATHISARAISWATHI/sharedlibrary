@@ -18,7 +18,7 @@ def usertotal = resultJson.size()
             }
          }
    }
-   def call(id1){
+   def commit(id1){
       withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
          sh "curl -X GET -i -H  -d  -u $username:$password https://gitlab.com/api/v4/projects/${id1}/merge_requests -o output.json"
    def jsonSlurper = new JsonSlurper()
