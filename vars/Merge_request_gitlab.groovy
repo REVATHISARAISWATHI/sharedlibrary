@@ -1,5 +1,5 @@
 import groovy.json.*
-   long ids1;
+   int ids1;
    def call(jsondata){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
@@ -19,7 +19,7 @@ def usertotal = resultJson.size()
             if(Name==resultJson[i].name)
             {
                def id1 = resultJson[i].id
-               println(id1)
+               println(id1.toInteger())
              return id1.toInteger()
             }
          }
