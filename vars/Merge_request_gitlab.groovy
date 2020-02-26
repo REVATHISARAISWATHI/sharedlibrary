@@ -4,14 +4,17 @@ import groovy.json.*
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
      withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
-      sh "curl -X GET    -u $username:$password https://gitlab.com/api/v4/users/5418155/projects -o output.json"
+      sh "curl -X GET -u $username:$password  https://gitlab.com/api/v4/users/5418155/projects -o output.json"
      }
    def jsonSlurper = new JsonSlurper()
  def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 def usertotal = resultJson.size()
       println(usertotal)
-      for(i=0;i<usertotal;i++)
+      println(jsonObj.scm.projects.project.project_name)
+      println(resultJson[i].name)
+      
+      for(i=0;i<=usertotal;i++)
          {
             if(jsonObj.scm.projects.project.project_name==resultJson[i].name)
             {
