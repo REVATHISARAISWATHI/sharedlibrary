@@ -15,6 +15,7 @@ def usertotal = resultJson.size()
             if(jsonObj.scm.projects.project.project_name==resultJson[i].name)
             {
                def id1 = resultJson[i].id
+               println(id1)
 .               return id1
             }
          }
