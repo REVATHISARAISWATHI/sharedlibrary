@@ -1,5 +1,5 @@
 import groovy.json.*
-   int ids1;
+   long ids1;
    def call(jsondata){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
