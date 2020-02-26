@@ -43,7 +43,7 @@ def resultJson = jsonSlurper.parse(reader)
    for(j=0;j<mailcount;j++)
    {
    def email=jsonObj.config.emails.email[j]
-   if(results.result[i].buildReason.contains(email))
+   if(resultJson.results.result[i].buildReason.contains(email))
    {
    cnus++
    user.add(JsonOutput.toJson(resultJson.results.result[i]))
