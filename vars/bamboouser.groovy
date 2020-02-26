@@ -47,7 +47,7 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email))
    {
    cnus++
-   user.add(JsonOutput.toJson(resultJson.results.result[i]))
+   USER.add(JsonOutput.toJson(resultJson.results.result[i]))
     
    }
    }
