@@ -22,7 +22,7 @@ def resultJson = jsonSlurper.parse(reader)
   //println(state)
  def cns=0
  def cnf=0
- def cnus=0
+ 
     List<String> SUCCESS = new ArrayList<String>();
     List<String> FAILURE = new ArrayList<String>();
     List<String> USER = new ArrayList<String>();
@@ -46,7 +46,7 @@ println(mailcount)
     //println(email)
    if(resultJson.results.result[i].buildReason.contains(email))
    {
-   cnus++
+   
    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
     
    }
