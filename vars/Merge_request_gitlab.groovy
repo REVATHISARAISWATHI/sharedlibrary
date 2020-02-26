@@ -22,15 +22,15 @@ def usertotal = resultJson.size()
             {
                def id1 = resultJson[i].id 
                //println(id1.toInteger())
-             //return id1
-                  commit(id1)
+             return id1
+                  
             }
          }
       
    }
 
-@NonCPS
-commit(ids1){
+//@NonCPS
+def commit(ids1){
       println(ids1)
       withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
          sh "curl -X GET -i -H  -d  -u $username:$password https://gitlab.com/api/v4/projects/${ids1}/merge_requests -o output.json"
