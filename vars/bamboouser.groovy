@@ -6,7 +6,7 @@ def call(JSON,IP)
 {
 def jsonString = JSON
 def jsonObj = readJSON text: jsonString
-int mailcount = jsonObj.config.emails.email.size()
+def mailcount = jsonObj.config.emails.email.size()
 
  sh """ curl -X GET \
   'http://18.220.143.53:8085/rest/api/latest/result/LAT-WEB.json?max-result=50&expand=results.result.artifacts&expand=changes.change.files&start-index=0' \
