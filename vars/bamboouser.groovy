@@ -37,55 +37,16 @@ println(mailcount)
    def state=resultJson.results.result[i].buildState
   // println(state)
   
-   
-  if(state.equals("Successful"))
-  {
    for(j=0;j<mailcount;j++)
    {
    def email=jsonObj.config.emails.email[j]
     //println(email)
-   if(resultJson.results.result[i].buildReason.contains(email))
+   if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
     
    }
-   }
-   // def user=resultJson.buildReason
-   // println(user)
-    //String res = user.substring(3, user.indexOf(' '))
-   /* def val = user.split('>')
-    //def str=val[1]
-     def vals = val[1].split('<')
-     def username=vals[0].split(' ')
-     println(username[0])*/
-   //echo "hi"
-   //filename = args[i]
-
-  cns++
-   //JSONObject obj=new JSONObject(output.json); 
-   //JSONArray success=obj.getJSONArray(resultJson.results.result[i]);
-  // println(success)
- /*  def json_str = JsonOutput.toJson(resultJson.results.result[i])
-def json_beauty = JsonOutput.prettyPrint(json_str)
-File file = new File(filename)
-file.write(json_beauty)*/
-   //List<String> JSON = new ArrayList<String>();
-  // SUCCESS.add(JsonOutput.toJson(resultJson.results.result[i]))
-      //def jsonString = JSON
-   //def jsonObj = readJSON text: JSON
- 
-   //println(JSON)
-
-  // println(JsonOutput.toJson(resultJson.results.result[0]))
-   //sh "echo  ${JsonOutput.toJson(resultJson.results.result[0])} > bam.json"
-    
-  }
-   else if(state.equals("Failed"))
-   {
-    cnf++
-       //FAILURE.add(JsonOutput.toJson(resultJson.results.result[i]))
-     
    }
   }
  //println(cnt)
