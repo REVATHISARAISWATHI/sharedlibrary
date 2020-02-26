@@ -43,7 +43,7 @@ println(mailcount)
    for(j=0;j<mailcount;j++)
    {
    def email=jsonObj.config.emails.email[j]
-    println(email)
+    //println(email)
    if(resultJson.results.result[i].buildReason.contains(email))
    {
    cnus++
@@ -91,6 +91,6 @@ file.write(json_beauty)*/
  //println(cnt)
 // println(Success)
  println(cnf)
- println(user)
+ println(USER)
  //echo "$cnt"
 }
