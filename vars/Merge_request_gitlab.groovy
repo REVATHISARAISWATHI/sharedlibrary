@@ -17,7 +17,7 @@ def usertotal = resultJson.size()
             {
                def id1 = resultJson[i].id
                println(id1)
-.               return id1
+             return id1
             }
          }
    }
