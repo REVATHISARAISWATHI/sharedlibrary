@@ -20,7 +20,7 @@ def usertotal = resultJson.size()
          {
             if(Name==resultJson[i].name)
             {
-               def id1 = resultJson[i].id
+               def id1 = resultJson[i].id 
                println(id1.toInteger())
              return id1.toInteger()
             }
