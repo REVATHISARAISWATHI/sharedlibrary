@@ -1,6 +1,8 @@
 import groovy.json.*
    int ids1;
-   def call(jsondata){
+
+
+def gitlab(jsondata){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
       String a=jsonObj.scm.projects.project.project_name
