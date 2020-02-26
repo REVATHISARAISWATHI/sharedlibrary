@@ -28,7 +28,7 @@ def resultJson = jsonSlurper.parse(reader)
     List<String> USER = new ArrayList<String>();
  
 
-
+println(mailcount)
   for(i=0;i<50;i++)
   {
  
