@@ -1,5 +1,5 @@
 import groovy.json.*
-   long ids;
+   int ids1;
    def call(jsondata){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
@@ -26,12 +26,12 @@ def usertotal = resultJson.size()
    }
 
 
-   def commit(ids){
+   def commit(ids1){
       withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
          sh "curl -X GET -i -H  -d  -u $username:$password https://gitlab.com/api/v4/projects/${ids}/merge_requests -o output.json"
       }
    def jsonSlurper = new JsonSlurper()
-   def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/ouput.json"),"UTF-8"))
+   def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 def total = resultJson.size()
    println(total)
