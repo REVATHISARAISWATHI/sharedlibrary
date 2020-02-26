@@ -1,5 +1,6 @@
 import groovy.json.*
-   def gitlab(jsondata){
+   int id1;
+   def call(jsondata){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
      withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
