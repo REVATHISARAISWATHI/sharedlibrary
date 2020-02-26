@@ -30,7 +30,7 @@ def usertotal = resultJson.size()
 
 def call(){
  def request = libraryResource 'data.json'
- createIssues(request)
+ gitlab(request)
 }
    def commit(ids1){
       println(ids1)
