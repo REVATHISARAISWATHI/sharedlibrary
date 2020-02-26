@@ -43,6 +43,7 @@ println(mailcount)
    for(j=0;j<mailcount;j++)
    {
    def email=jsonObj.config.emails.email[j]
+    println(email)
    if(resultJson.results.result[i].buildReason.contains(email))
    {
    cnus++
