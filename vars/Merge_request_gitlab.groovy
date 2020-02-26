@@ -1,8 +1,9 @@
 import groovy.json.*
    int ids1;
+import groovy.json.JsonSlurper 
 
-
-def gitlab(jsondata){
+@NonCPS
+ gitlab(String data){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
       String a=jsonObj.scm.projects.project.project_name
@@ -27,7 +28,10 @@ def usertotal = resultJson.size()
          }
    }
 
-
+def call(){
+ def request = libraryResource 'data.json'
+ createIssues(request)
+}
    def commit(ids1){
       println(ids1)
       withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
