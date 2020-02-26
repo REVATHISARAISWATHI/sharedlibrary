@@ -45,6 +45,7 @@ def resultJson = jsonSlurper.parse(reader)
    {
    user.add(JsonOutput.toJson(resultJson.results.result[i]))
    }
+   }
    // def user=resultJson.buildReason
    // println(user)
     //String res = user.substring(3, user.indexOf(' '))
