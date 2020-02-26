@@ -4,7 +4,7 @@ import groovy.json.*
 
 def call(JSON,IP)
 {
-ef jsonString = jsondata
+def jsonString = JSON
 def jsonObj = readJSON text: jsonString
 int mailcount = jsonObj.config.emails.email.size()
 
@@ -65,7 +65,7 @@ def json_beauty = JsonOutput.prettyPrint(json_str)
 File file = new File(filename)
 file.write(json_beauty)*/
    //List<String> JSON = new ArrayList<String>();
-   SUCCESS.add(JsonOutput.toJson(resultJson.results.result[i]))
+  // SUCCESS.add(JsonOutput.toJson(resultJson.results.result[i]))
       //def jsonString = JSON
    //def jsonObj = readJSON text: JSON
  
@@ -78,13 +78,13 @@ file.write(json_beauty)*/
    else if(state.equals("Failed"))
    {
     cnf++
-       FAILURE.add(JsonOutput.toJson(resultJson.results.result[i]))
+       //FAILURE.add(JsonOutput.toJson(resultJson.results.result[i]))
      
    }
   }
  //println(cnt)
 // println(Success)
  println(cnf)
- println(FAILURE)
+ println(user)
  //echo "$cnt"
 }
