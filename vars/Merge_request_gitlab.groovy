@@ -1,5 +1,5 @@
 import groovy.json.*
-   int id1;
+   int ids;
    def call(jsondata){
       def jsonString = jsondata
       def jsonObj = readJSON text: jsonString
@@ -20,7 +20,9 @@ def usertotal = resultJson.size()
             }
          }
    }
-   def commit(id1){
+
+
+   def commit(ids){
       withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
          sh "curl -X GET -i -H  -d  -u $username:$password https://gitlab.com/api/v4/projects/${id1}/merge_requests -o output.json"
       }
