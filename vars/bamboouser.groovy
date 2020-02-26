@@ -90,7 +90,7 @@ file.write(json_beauty)*/
   }
  //println(cnt)
 // println(Success)
- println(cnf)
+
  println(USER)
  //echo "$cnt"
 }
