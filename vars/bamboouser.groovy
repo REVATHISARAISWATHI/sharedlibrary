@@ -34,7 +34,7 @@ def resultJson = jsonSlurper.parse(reader)
 println(mailcount)
    for(j=0;j<mailcount;j++)
    {
-     List<String> USER+j= new ArrayList<String>();
+     
     
   for(i=0;i<50;i++)
   {
