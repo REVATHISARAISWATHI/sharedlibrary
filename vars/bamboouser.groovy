@@ -66,7 +66,7 @@ println(mailcount)
     arr[j]=ct
    ct=0
     
-   println(arr[i])
+   println(arr[j])
   }
  //println(cnt)
 // println(Success)
