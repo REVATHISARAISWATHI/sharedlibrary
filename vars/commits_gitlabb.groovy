@@ -43,17 +43,18 @@ def total = resultJson.size()
 	println(ecount)
       //println(JsonOutput.toJson(resultJson))
       List<String> JSON = new ArrayList<String>();
-
+def cnt=0
 for(i=0;i<ecount;i++)
  {
 	 
   for(j=0;j<total;j++)
   {
-	  println(jsonObj.config.emails.email[i])
-	  println(resultJson[j].author_email)
+	 // println(jsonObj.config.emails.email[i])
+	 // println(resultJson[j].author_email)
    if(jsonObj.config.emails.email[i]==resultJson[j].author_email)
    {
 	   JSON.add(JsonOutput.toJson(resultJson[j]))
+	   cnt++
      }
      }
      }
