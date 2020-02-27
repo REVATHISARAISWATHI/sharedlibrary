@@ -47,14 +47,14 @@ println(mailcount)
     //println(email)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
-  def user=user+i
-    println(user)
+ 
    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
     //map.put(JsonOutput.toJson(resultJson.results.result[i]),"USER"+j)
    
     
    }
-
+ def USER=USER+i
+    println(USER)
    }
   }
  //println(cnt)
