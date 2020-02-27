@@ -33,7 +33,7 @@ def jsonObj = readJSON text: jsonString
 	int ecount = jsonObj.config.emails.email.size()
          println("No of users "+ ecount)
       withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
-         sh "curl -X GET   -u $username:$password https://gitlab.com/api/v4/projects/${ids1}/commits -o output.json"
+	      sh "curl -X GET   -u $username:$password https://gitlab.com/api/v4/projects/${ids1}/repository/commits -o output.json"
       }
    def jsonSlurper = new JsonSlurper()
    def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
