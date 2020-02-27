@@ -63,7 +63,7 @@ println(mailcount)
 //println(USER)
  for(i=0;i<mailcount;i++)
  {
-  "def var"+i=USER
+  def (var+i)=USER[i]
  }
 println(var0)
  
