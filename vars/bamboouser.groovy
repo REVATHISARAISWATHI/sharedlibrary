@@ -1,19 +1,7 @@
 import groovy.json.*
  import groovy.json.JsonOutput
 
-class person {    
-   private String email;
-   private String data;
 
-   void setemail(String uemail) {
-      email= uemail;
-   }
-
- void setdata(String udata) {
-      data= udata;
-   }
-
-}
 def call(JSON,IP)
 {
 def jsonString = JSON
@@ -40,8 +28,8 @@ def resultJson = jsonSlurper.parse(reader)
     List<String> FAILURE = new ArrayList<String>();
  //ArrayList<Student> students = new ArrayList<Student>();
 
-// HashMap<String,String> map = new HashMap<>();
-   List<person> USER = new ArrayList<person>();
+ HashMap<String,String> map = new HashMap<String,String>();
+  // List<person> USER = new ArrayList<person>();
 
  
 
@@ -65,11 +53,11 @@ println(mailcount)
    {
    def p = new person();
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
-    p.setemail(email)
-   p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
+   // p.setemail(email)
+  // p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
     //p.email=resultJson.results.result[j]
     //p.data=JsonOutput.toJson(resultJson.results.result[i])
-    USER.add(p)
+    USER.put(email,JsonOutput.toJson(resultJson.results.result[i])
     ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
