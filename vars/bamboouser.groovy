@@ -8,15 +8,11 @@ class person {
    void setemail(String uemail) {
       email= uemail;
    }
- String getemail() {
-      return this.email;
-   } 
+
  void setdata(String udata) {
       data= udata;
    }
- String getdata() {
-      return this.data;
-   }
+
 }
 def call(JSON,IP)
 {
