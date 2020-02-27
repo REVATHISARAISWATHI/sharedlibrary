@@ -60,7 +60,7 @@ println(mailcount)
 
 // println(USER[3])
 // println(map.size())
- println(user.size())
+ println(USER.size())
  
  //echo "$cnt"
 }
