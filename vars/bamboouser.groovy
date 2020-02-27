@@ -10,7 +10,8 @@ class person {
    }
  String getemail() {
       return this.email;
-   } void setdata(String udata) {
+   } 
+ void setdata(String udata) {
       data= udata;
    }
  String getdata() {
