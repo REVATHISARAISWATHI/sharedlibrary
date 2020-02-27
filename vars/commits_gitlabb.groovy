@@ -26,7 +26,9 @@ def usertotal = resultJson.size()
             }
          }
          }
-def commit(ids1){
+def commit(ids1,jsondata){
+	def jsonString = jsondata
+def jsonObj = readJSON text: jsonString
       println(ids1)
 	int ecount = jsonObj.config.emails.email.size()
          println("No of users "+ ecount)
