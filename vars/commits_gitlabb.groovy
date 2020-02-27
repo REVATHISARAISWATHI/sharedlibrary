@@ -57,7 +57,8 @@ for(i=0;i<ecount;i++)
 	   cnt++
      }
      }
+	    println(JSON)
      }
-     println(JSON)
+  
      
 }
