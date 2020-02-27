@@ -66,7 +66,7 @@ println(mailcount)
  {
    var.put("USER"+i)
  }
-println(var(USER0)
+println(var(USER0))
  
  //echo "$cnt"
 }
