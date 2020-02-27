@@ -36,5 +36,5 @@ def commit(ids1){
 def resultJson = jsonSlurper.parse(reader)
 def total = resultJson.size()
    println(total)
-      println(JsonOutput.toJson(resultJson))
+      //println(JsonOutput.toJson(resultJson))
 }
