@@ -47,7 +47,8 @@ println(mailcount)
     //println(email)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
-   
+  def user=user+i
+    println(user)
    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
     //map.put(JsonOutput.toJson(resultJson.results.result[i]),"USER"+j)
    
@@ -62,11 +63,11 @@ println(mailcount)
 
 //println(USER)
  
- for(i=0;i<mailcount;i++)
+ /*for(i=0;i<mailcount;i++)
  {
    var.put("USER[i]"+i)
  }
-println(var)
+println(var)*/
  
  //echo "$cnt"
 }
