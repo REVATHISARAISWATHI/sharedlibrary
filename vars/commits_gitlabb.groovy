@@ -28,6 +28,8 @@ def usertotal = resultJson.size()
          }
 def commit(ids1){
       println(ids1)
+	int ecount = jsonObj.config.emails.email.size()
+         println("No of users "+ ecount)
       withCredentials([usernamePassword(credentialsId: 'gitlab_cred', passwordVariable: 'password', usernameVariable:'username')]) {
          sh "curl -X GET   -u $username:$password https://gitlab.com/api/v4/projects/${ids1}/commits -o output.json"
       }
