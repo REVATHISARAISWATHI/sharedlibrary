@@ -40,6 +40,7 @@ def jsonObj = readJSON text: jsonString
 def resultJson = jsonSlurper.parse(reader)
 def total = resultJson.size()
    println(total)
+	println(ecount)
       //println(JsonOutput.toJson(resultJson))
       List<String> JSON = new ArrayList<String>();
 
