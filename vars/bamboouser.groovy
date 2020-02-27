@@ -54,7 +54,7 @@ println(mailcount)
    
    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
     ct++
-     println(ct)
+    
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
  
     //map.put(JsonOutput.toJson(resultJson.results.result[i]),"USER"+j)
@@ -65,6 +65,7 @@ println(mailcount)
    }
     arr[j]=ct
    ct=0
+    
   }
  //println(cnt)
 // println(Success)
@@ -72,6 +73,10 @@ println(mailcount)
 
 //println(USER)
 println(USER)
+ for(i=0;i<mailcount;i++)
+ {
+   println(arr[i])
+ }
  
  //echo "$cnt"
 }
