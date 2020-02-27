@@ -1,6 +1,6 @@
 import groovy.json.*
 import groovy.json.JsonSlurper 
-int ids1;
+//int ids1;
 
 def call(jsondata){
       def jsonString = jsondata
