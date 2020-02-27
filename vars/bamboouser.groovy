@@ -34,10 +34,10 @@ def resultJson = jsonSlurper.parse(reader)
  
 
 println(mailcount)
+ def arr= new int[mailcount]
    for(j=0;j<mailcount;j++)
    {
-      def arr= new int[mailcount]
-    
+     
   for(i=0;i<50;i++)
   {
  
@@ -66,17 +66,18 @@ println(mailcount)
     arr[j]=ct
    ct=0
     
+   println(arr[i])
   }
  //println(cnt)
 // println(Success)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
 //println(USER)
-println(USER)
- for(i=0;i<mailcount;i++)
+//println(USER)
+/* for(i=0;i<mailcount;i++)
  {
    println(arr[i])
- }
+ }*/
  
  //echo "$cnt"
 }
