@@ -46,9 +46,10 @@ def total = resultJson.size()
 
 for(i=0;i<ecount;i++)
  {
-	 println(jsonObj.config.emails.email[i])
+	 
   for(j=0;j<total;j++)
   {
+	  println(jsonObj.config.emails.email[i])
 	  println(resultJson[j].author_email)
    if(jsonObj.config.emails.email[i]==resultJson[j].author_email)
    {
