@@ -26,7 +26,7 @@ def resultJson = jsonSlurper.parse(reader)
     List<String> SUCCESS = new ArrayList<String>();
     List<String> FAILURE = new ArrayList<String>();
  
-// HashMap<String,String> map = new HashMap<>();
+    HashMap<String,Integer> var  = new HashMap<>();
     List<String> USER = new ArrayList<String>();
  
 
@@ -61,11 +61,12 @@ println(mailcount)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
 //println(USER)
+ 
  for(i=0;i<mailcount;i++)
  {
-  def ("var"+i)=USER[i]
+   var.put("USER"+i)
  }
-println(var0)
+println(var(USER0)
  
  //echo "$cnt"
 }
