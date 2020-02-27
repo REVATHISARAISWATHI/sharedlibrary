@@ -16,7 +16,7 @@ def resultJson = jsonSlurper.parse(reader)
 def usertotal = resultJson.size()
       println(usertotal)
       println(Name)
-      for(i=0;i<usertotal-1;i++)
+      for(i=1;i<usertotal-1;i++)
          {
             if(Name==resultJson[i].name)
             {
