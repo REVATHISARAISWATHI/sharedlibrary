@@ -52,8 +52,7 @@ println(mailcount)
     //map.put(JsonOutput.toJson(resultJson.results.result[i]),j)
     
    }
-   def USER=USER+j
-    List<String> USER = new ArrayList<String>();
+ 
    }
   }
  //println(cnt)
