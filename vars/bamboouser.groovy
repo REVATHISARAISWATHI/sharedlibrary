@@ -1,5 +1,5 @@
 import groovy.json.*
-import groovy.json.JsonOutput
+ import groovy.json.JsonOutput
 
 
 def call(JSON,IP)
@@ -48,19 +48,20 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
-  // USER.add(JsonOutput.toJson(resultJson.results.result[i]))
-    map.put(JsonOutput.toJson(resultJson.results.result[i]),"USER"+j)
+   USER.add(JsonOutput.toJson(resultJson.results.result[i]))
+    //map.put(JsonOutput.toJson(resultJson.results.result[i]),"USER"+j)
+   
     
    }
- 
+
    }
   }
  //println(cnt)
 // println(Success)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
-// println(USER)
- println(USER1)
+println(USER)
+// println()
  
  //echo "$cnt"
 }
