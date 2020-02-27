@@ -45,13 +45,14 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
-   USER.get(i).add(JsonOutput.toJson(resultJson.results.result[i]))
+   USER.add(JsonOutput.toJson(resultJson.results.result[i]))
     
    }
    }
   }
  //println(cnt)
 // println(Success)
+   USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
  println(USER)
  //echo "$cnt"
