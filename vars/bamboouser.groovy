@@ -61,9 +61,10 @@ println(mailcount)
    
     
    }
-arr[j]=ct
-   ct=0
+
    }
+    arr[j]=ct
+   ct=0
   }
  //println(cnt)
 // println(Success)
