@@ -51,7 +51,7 @@ println(mailcount)
     //println(email)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
-   def p = new person();
+   //def p = new person();
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
    // p.setemail(email)
   // p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
