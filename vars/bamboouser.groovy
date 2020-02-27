@@ -60,10 +60,12 @@ println(mailcount)
 // println(Success)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
-println(USER[0])
- println(USER[1])
- println(USER[2])
-// println()
+//println(USER)
+ for(i=0;i<mailcount;i++)
+ {
+  "def var"+i=USER[i]
+ }
+println(var0)
  
  //echo "$cnt"
 }
