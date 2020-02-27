@@ -69,10 +69,10 @@ println(mailcount)
    {
    def p = new person();
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
-    //p.email(resultJson.results.result[j])
-   //p.data(JsonOutput.toJson(resultJson.results.result[i]))
-    p.email=resultJson.results.result[j]
-    p.data=JsonOutput.toJson(resultJson.results.result[i])
+    p.setemail(resultJson.results.result[j])
+   p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
+    //p.email=resultJson.results.result[j]
+    //p.data=JsonOutput.toJson(resultJson.results.result[i])
     USER.add(p)
     ct++
     
