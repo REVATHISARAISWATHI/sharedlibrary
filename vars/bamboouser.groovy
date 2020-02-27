@@ -51,8 +51,8 @@ println(mailcount)
     //println(email)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
-   
-   USER.add(JsonOutput.toJson(resultJson.results.result[i]))
+    USER.collect { new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
+   //USER.add(JsonOutput.toJson(resultJson.results.result[i]))
     ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
@@ -72,7 +72,7 @@ println(mailcount)
 // println(Success)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
-//println(USER)
+println(USER)
 //println(USER)
 for(i=0;i<arr.size();i++)
  {
