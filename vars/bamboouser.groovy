@@ -22,6 +22,7 @@ def resultJson = jsonSlurper.parse(reader)
   //println(state)
  def cns=0
  def cnf=0
+ def ct=0
  
     List<String> SUCCESS = new ArrayList<String>();
     List<String> FAILURE = new ArrayList<String>();
@@ -29,12 +30,13 @@ def resultJson = jsonSlurper.parse(reader)
 
 // HashMap<String,String> map = new HashMap<>();
    List<String> USER = new ArrayList<String>();
+
  
 
 println(mailcount)
    for(j=0;j<mailcount;j++)
    {
-     
+      def arr= new int[mailcount]
     
   for(i=0;i<50;i++)
   {
@@ -51,13 +53,16 @@ println(mailcount)
    {
    
    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
+    ct++
+     println(ct)
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
  
     //map.put(JsonOutput.toJson(resultJson.results.result[i]),"USER"+j)
    
     
    }
-
+arr[j]=ct
+   ct=0
    }
   }
  //println(cnt)
