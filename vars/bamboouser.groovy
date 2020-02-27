@@ -10,6 +10,11 @@ class person {
    }
  String getemail() {
       return this.email;
+   } void setdata(String udata) {
+      data= udata;
+   }
+ String getdata() {
+      return this.data;
    }
 }
 def call(JSON,IP)
@@ -63,8 +68,10 @@ println(mailcount)
    {
    def p = new person();
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
-    p.name(resultJson.results.result[j])
-   p.data(JsonOutput.toJson(resultJson.results.result[i]))
+    //p.email(resultJson.results.result[j])
+   //p.data(JsonOutput.toJson(resultJson.results.result[i]))
+    p.email=resultJson.results.result[j]
+    p.data=JsonOutput.toJson(resultJson.results.result[i])
     USER.add(p)
     ct++
     
