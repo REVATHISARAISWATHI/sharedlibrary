@@ -25,13 +25,14 @@ def resultJson = jsonSlurper.parse(reader)
  
     List<String> SUCCESS = new ArrayList<String>();
     List<String> FAILURE = new ArrayList<String>();
+ HashMap<String,Integer> map = new HashMap<>();
    
  
 
 println(mailcount)
    for(j=0;j<mailcount;j++)
    {
-     List<String> USER(j) = new ArrayList<String>();
+     List<String> USER = new ArrayList<String>();
   for(i=0;i<50;i++)
   {
  
@@ -46,15 +47,18 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
-   USER(j).add(JsonOutput.toJson(resultJson.results.result[i]))
+   USER.add(JsonOutput.toJson(resultJson.results.result[i]))
+    map.put(JsonOutput.toJson(resultJson.results.result[i]),j)
     
    }
    }
   }
  //println(cnt)
 // println(Success)
-   USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
+  // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
  println(USER)
+ println(map)
+ 
  //echo "$cnt"
 }
