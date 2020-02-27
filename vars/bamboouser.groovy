@@ -64,7 +64,7 @@ println(mailcount)
  
  for(i=0;i<mailcount;i++)
  {
-   var.put("USER"+i)
+   var.put("USER[i]"+i)
  }
 println(var(USER0))
  
