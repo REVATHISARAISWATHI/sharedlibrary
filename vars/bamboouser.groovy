@@ -66,7 +66,7 @@ println(mailcount)
     arr[j]=ct
    ct=0
     
-   println(arr[j])
+  // println(arr[j])
   }
  //println(cnt)
 // println(Success)
@@ -74,10 +74,10 @@ println(mailcount)
 
 //println(USER)
 //println(USER)
-/* for(i=0;i<mailcount;i++)
+for(i=0;i<arr.size();i++)
  {
    println(arr[i])
- }*/
+ }
  
  //echo "$cnt"
 }
