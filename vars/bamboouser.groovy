@@ -58,7 +58,7 @@ println(mailcount)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
 // println(USER)
- println(map)
+ println(map.size())
  
  //echo "$cnt"
 }
