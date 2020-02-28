@@ -59,7 +59,7 @@ println(mailcount)
   // p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
     //p.email=resultJson.results.result[j]
     //p.data=JsonOutput.toJson(resultJson.results.result[i])
-    map.put(email,JsonOutput.toJson(resultJson.results.result[i]))
+    map.put(email, Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
     ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
@@ -80,7 +80,7 @@ println(mailcount)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
 println(map)
-println(USER)
+//println(USER)
 for(i=0;i<arr.size();i++)
  {
    println(arr[i])
