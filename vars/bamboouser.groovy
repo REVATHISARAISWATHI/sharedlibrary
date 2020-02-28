@@ -116,7 +116,7 @@ println(mailcount)
  
 //def k=0
 	//def r=0
-println(ssuser[0])
+println(suser[0])
 	
 /* for(j=1;j<mailcount;j++)
    {
