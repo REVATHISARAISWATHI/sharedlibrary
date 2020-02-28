@@ -139,7 +139,7 @@ println(mailcount)
 	def n=0
 	for(j=0;j<mailcount;j++)
 	{
-		def email=def email=jsonObj.config.emails.email[j]
+		def email=jsonObj.config.emails.email[j]
 			
 		for(i=0;i<USER.size();i++)
 		{
