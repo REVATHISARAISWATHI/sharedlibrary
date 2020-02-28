@@ -96,8 +96,8 @@ println(mailcount)
    }
     arr[j]=ct
    ct=0
-	   suser=(JsonOutput.toJson(USER))
-	   map.put(email,suser)
+	   suser[j]=(JsonOutput.toJson(USER))
+	 //  map.put(email,suser)
 	   USER.clear()
     //println(USER)
     //map.put(email,USER )
@@ -114,9 +114,9 @@ println(mailcount)
 	for(user u:){
 		  println(u.getdata)*/
  
-def k=0
-	def r=0
-//println(USER)
+//def k=0
+	//def r=0
+println(ssuser[0])
 	
 /* for(j=1;j<mailcount;j++)
    {
@@ -137,7 +137,7 @@ def k=0
 
    }*/
 	//println(suser)
-println(map)
+//println(map)
  
  //echo "$cnt"
 }
