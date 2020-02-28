@@ -135,21 +135,22 @@ println(mailcount)
 	   r++
    }*/
 	println(USER)
+	println(USER.size)
 	def k=0
 	
 	for(j=0;j<mailcount;j++)
 	{
 		def email1=jsonObj.config.emails.email[j]
 			
-		for(i=0;i<USER.size();i++)
-		{
-			if(USER[i].contains(email1))
+		
+			while(USER[i].contains(email1))
 			      {
 				      u[k]=USER[i]
+				      i++
 				      
 					      }
 			      k++
-			      }
+			      
 	}
 			      for(k=0;k<u.size();k++)
 			      {
