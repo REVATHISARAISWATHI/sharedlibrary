@@ -39,24 +39,25 @@ def resultJson = jsonSlurper.parse(reader)
  def cnf=0
  def ct=0
  
-    List<String> SUCCESS = new ArrayList<String>();
-    List<String> FAILURE = new ArrayList<String>();
+   // List<String> SUCCESS = new ArrayList<String>();
+  //  List<String> FAILURE = new ArrayList<String>();
  //ArrayList<Student> students = new ArrayList<Student>();
 
 //HashMap<String,List<String>> map = new HashMap<>();
  //Map<Object,ArrayList<Object>> map = new HashMap<>();
- Map<String, List<String>> map = new HashMap<String, List<String>>();
+// Map<String, List<String>> map = new HashMap<String, List<String>>();
 
 
-  List<String> USER = new ArrayList<String>();
-	List<String> suser = new ArrayList<String>();
+ List<String> USER = new ArrayList<String>();
+	//List<String> suser = new ArrayList<String>();
 	//user [] u=new user[mailcount]
 // List<Person> people = new ArrayList<>();
 
  
 
 println(mailcount)
- def arr= new int[mailcount]
+// def arr= new int[mailcount]
+	def u=new string[mailcount]
    for(j=0;j<mailcount;j++)
    {
     def email=jsonObj.config.emails.email[j] 
@@ -69,7 +70,7 @@ println(mailcount)
   // println(state)
   
  
-  // def email=jsonObj.config.emails.email[j]
+   def email=jsonObj.config.emails.email[j]
     //println(email)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
@@ -84,7 +85,7 @@ println(mailcount)
     //p.data=JsonOutput.toJson(resultJson.results.result[i])
    // USER.add(u)
   // map.put(email,Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
-    ct++
+  //  ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
  
@@ -94,10 +95,10 @@ println(mailcount)
    }
 
    }
-    arr[j]=ct
-   ct=0
-	   map.put(email,USER)
-	   USER.clear()
+  //  arr[j]=ct
+//   ct=0
+	 //  map.put(email,USER)
+	//   USER.clear()
     //println(USER)
     //map.put(email,USER )
     
@@ -113,8 +114,8 @@ println(mailcount)
 	for(user u:){
 		  println(u.getdata)*/
  
-def k=0
-	def r=0
+//def k=0
+	//def r=0
 //println(USER)
 	
 /* for(j=1;j<mailcount;j++)
@@ -133,8 +134,27 @@ def k=0
 	   //suser.clear()
 	   r++
    }*/
-	println(suser)
-println(map)
+	println(USER)
+	def k=0
+	def n=0
+	for(j=0;j<mailcount;j++)
+	{
+		def email=def email=jsonObj.config.emails.email[j]
+			
+		for(i=0;i<USER.size();i++)
+		{
+			while(USER[i].contains(email))
+			      {
+				      u[k]=USER[i]
+				      i++
+					      }
+			      k++
+			      }n=k
+			      for(k=0;k<n;k++)
+			      {
+				      println(u[k])
+			      }
+
  
  //echo "$cnt"
 }
