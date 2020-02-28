@@ -44,10 +44,11 @@ def total = resultJson.size()
       //println(JsonOutput.toJson(resultJson))
       List<String> JSON = new ArrayList<String>();
       List<String> JCOPY = new ArrayList<String>();
+	Map<String, List<String>> map = new HashMap<String, List<String>>();
 def cnt=0
 for(i=0;i<ecount;i++)
  {
-	 
+	 def mail=jsonObj.config.emails.email[i]
   for(j=0;j<total;j++)
   {
 	 // println(jsonObj.config.emails.email[i])
@@ -61,13 +62,15 @@ for(i=0;i<ecount;i++)
 	 println(jsonObj.config.emails.email[i])
 	 JCOPY[i]=(JsonOutput.toJson(JSON))
 	 println(JCOPY[i])
+	 map.put(mail,JCOPY[i])
 	 JSON.clear()
 	 
 	   
      }
-  for(i=0;i<JCOPY.size();i++)
+ /* for(i=0;i<JCOPY.size();i++)
 	{
 		println(JCOPY[i])
-	}
+	}*/
+	println(map)
      
 }
