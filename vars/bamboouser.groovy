@@ -29,7 +29,7 @@ def resultJson = jsonSlurper.parse(reader)
  //ArrayList<Student> students = new ArrayList<Student>();
 
  HashMap<String,List<String>> map = new HashMap<String,List<String>>();
-  List<person> USER = new ArrayList<person>();
+  List<String> USER = new ArrayList<String>();
 
  
 
@@ -80,7 +80,7 @@ println(mailcount)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
 println(map)
-//println(USER)
+println(USER)
 for(i=0;i<arr.size();i++)
  {
    println(arr[i])
