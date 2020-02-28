@@ -3,7 +3,7 @@ import groovy.json.*
 public class user {
 private String data;
  public String getdata() {
-	return data;
+	return udata;
 }
 public void setdata(String udata) {
 	this.udata = udata;
