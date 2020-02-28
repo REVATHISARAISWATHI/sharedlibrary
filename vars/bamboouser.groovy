@@ -88,9 +88,12 @@ println(mailcount)
 
 println(map)
 //println(USER)
+ for
 for(i=0;i<arr.size();i++)
  {
    println(arr[i])
+  if(
+    map.put(email,Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
  }
  
  //echo "$cnt"
