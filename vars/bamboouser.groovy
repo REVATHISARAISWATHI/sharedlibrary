@@ -1,6 +1,14 @@
 import groovy.json.*
  import groovy.json.JsonOutput
-
+public class user {
+private String data;
+ public String getdata() {
+	return data;
+}
+public void setdata(String udata) {
+	this.udata = udta;
+}
+}
 
 def call(JSON,IP)
 {
@@ -33,7 +41,7 @@ def resultJson = jsonSlurper.parse(reader)
  Map<String, List<String>> map = new HashMap<String, List<String>>();
 
 
-  List<String> USER = new ArrayList<String>();
+  List<user> USER = new ArrayList<user>();
 // List<Person> people = new ArrayList<>();
 
  
@@ -56,15 +64,17 @@ println(mailcount)
     //println(email)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
+    def u =new user()
    //def p = new person();
     //people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
     //USER.add(JsonOutput.toJson(resultJson.results.result[i]))
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
-   // p.setemail(email)
-  // p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
+    //p.setemail(email)
+  u.setdata(JsonOutput.toJson(resultJson.results.result[i]))
     //p.email=resultJson.results.result[j]
     //p.data=JsonOutput.toJson(resultJson.results.result[i])
-    map.put(email,Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
+    USER.add(u)
+   // map.put(email,Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
     ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
@@ -88,13 +98,13 @@ println(mailcount)
 
 println(map)
 //println(USER)
- for
+/* for
 for(i=0;i<arr.size();i++)
  {
    println(arr[i])
   if(
     map.put(email,Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
  }
- 
+ */
  //echo "$cnt"
 }
