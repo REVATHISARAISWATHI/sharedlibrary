@@ -28,10 +28,13 @@ def resultJson = jsonSlurper.parse(reader)
     List<String> FAILURE = new ArrayList<String>();
  //ArrayList<Student> students = new ArrayList<Student>();
 
-HashMap<String,List<String>> map = new HashMap<>();
+//HashMap<String,List<String>> map = new HashMap<>();
  //Map<Object,ArrayList<Object>> map = new HashMap<>();
-  //List<String> USER = new ArrayList<String>();
- List<Person> people = new ArrayList<>();
+ Map<String, List<String>> map = new HashMap<String, List<String>>();
+
+
+  List<String> USER = new ArrayList<String>();
+// List<Person> people = new ArrayList<>();
 
  
 
@@ -39,7 +42,7 @@ println(mailcount)
  def arr= new int[mailcount]
    for(j=0;j<mailcount;j++)
    {
-     
+    def email=jsonObj.config.emails.email[j] 
   for(i=0;i<50;i++)
   {
  
@@ -54,14 +57,14 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    //def p = new person();
-    people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
+    //people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
     USER.add(JsonOutput.toJson(resultJson.results.result[i]))
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
    // p.setemail(email)
   // p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
     //p.email=resultJson.results.result[j]
     //p.data=JsonOutput.toJson(resultJson.results.result[i])
-    map.put(email,people )
+   // map.put(email,USER)
     ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
@@ -74,6 +77,8 @@ println(mailcount)
    }
     arr[j]=ct
    ct=0
+    println(USER)
+    map.put(email,USER )
     
   // println(arr[j])
   }
