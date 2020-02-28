@@ -49,6 +49,7 @@ def resultJson = jsonSlurper.parse(reader)
 
 
   List<String> USER = new ArrayList<String>();
+	List<String> suser = new ArrayList<String>();
 	//user [] u=new user[mailcount]
 // List<Person> people = new ArrayList<>();
 
@@ -113,7 +114,7 @@ println(mailcount)
 def k=0
 	def r=0
 //println(USER)
-	List<String> suser = new ArrayList<String>();
+	
  for(j=1;j<mailcount;j++)
    {
     def email=jsonObj.config.emails.email[j] 
