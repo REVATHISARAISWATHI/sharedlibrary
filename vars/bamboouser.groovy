@@ -29,7 +29,7 @@ def resultJson = jsonSlurper.parse(reader)
 
 
   List<String> USER = new ArrayList<String>();
-  List<String> suser = new ArrayList<String>();
+  
 	//user [] u=new user[mailcount]
 // List<Person> people = new ArrayList<>();
 
