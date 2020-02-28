@@ -111,6 +111,7 @@ println(mailcount)
 		  println(u.getdata)*/
  
 def k=0
+	def r=0
 //println(USER)
 	List<String> suser = new ArrayList<String>();
  for(j=1;j<mailcount;j++)
@@ -120,14 +121,15 @@ def k=0
   
  
 	 while(arr[k]!=0){ 
-	 suser.add(USER[k])
+		 
+	 suser.add(USER[r])
     //map.put(email,USER[k])
 		 arr[k]--
 			 
 	 }
 	    map.put(email,suser)
 	   //suser.clear()
-	   k++
+	   r++
 
    }
 println(map)
