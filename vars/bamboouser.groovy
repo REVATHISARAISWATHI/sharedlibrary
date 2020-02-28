@@ -50,7 +50,7 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
-    USER[j].add.get.(resultJson.results.result[i])
+    USER[j].add(resultJson.results.result[i])
    
    
     
