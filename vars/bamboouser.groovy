@@ -58,13 +58,13 @@ println(mailcount)
    {
    //def p = new person();
     //people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
-    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
+    //USER.add(JsonOutput.toJson(resultJson.results.result[i]))
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
    // p.setemail(email)
   // p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
     //p.email=resultJson.results.result[j]
     //p.data=JsonOutput.toJson(resultJson.results.result[i])
-    map.put(email,USER)
+    map.put(email,JsonOutput.toJson(resultJson.results.result[i]))
     ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
