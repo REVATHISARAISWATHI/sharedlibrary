@@ -75,14 +75,14 @@ println(mailcount)
     //def u =new user()
    //def p = new person();
     //people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
-    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
+    //USER.add(JsonOutput.toJson(resultJson.results.result[i]))
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
     //p.setemail(email)
  // u.setdata(JsonOutput.toJson(resultJson.results.result[i]))
     //p.email=resultJson.results.result[j]
     //p.data=JsonOutput.toJson(resultJson.results.result[i])
    // USER.add(u)
-   // map.put(email,Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
+   map.put(email,Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
     ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
@@ -118,10 +118,10 @@ println(USER)
     def email=jsonObj.config.emails.email[j] 
 
   
-/* if(USER[i].contains(email))
+ if(USER[i].contains(email))
 	 {
 		 u[i].email=email
-		 u[i].data=USER[i]*/
+		 u[i].data=USER[i]
 	 while(arr[k]!=0){ 
 	 suser.add(USER[k])
     //map.put(email,USER[k])
@@ -129,7 +129,7 @@ println(USER)
 			 
 	 }
 	    map.put(email,suser)
-	   suser.clear()
+	   //suser.clear()
 	   k++
 
    }
