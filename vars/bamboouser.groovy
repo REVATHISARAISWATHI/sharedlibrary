@@ -128,7 +128,8 @@ println(USER)
 		 arr[k]--
 			 
 	 }
-	    map.put(email,USER[k])
+	    map.put(email,suser)
+	   suser.clear()
 	   k++
 
    }
