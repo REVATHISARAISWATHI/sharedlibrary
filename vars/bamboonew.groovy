@@ -136,7 +136,7 @@ println(mailcount)
    }*/
 	println(USER)
 	def k=0
-	def n=0
+	
 	for(j=0;j<mailcount;j++)
 	{
 		def email=jsonObj.config.emails.email[j]
@@ -149,8 +149,9 @@ println(mailcount)
 				      i++
 					      }
 			      k++
-			      }n=k
-			      for(k=0;k<n;k++)
+			      }
+	}
+			      for(k=0;k<u.size();k++)
 			      {
 				      println(u[k])
 			      }
