@@ -141,6 +141,7 @@ println(mailcount)
 	for(j=1;j<mailcount;j++)
 	{
 		def email1=jsonObj.config.emails.email[j]
+		println(email1)
 			
 		
 			while(USER[i].contains(email1))
