@@ -28,7 +28,8 @@ def resultJson = jsonSlurper.parse(reader)
     List<String> FAILURE = new ArrayList<String>();
  //ArrayList<Student> students = new ArrayList<Student>();
 
- HashMap<String,List<String>> map = new HashMap<String,List<String>>();
+// HashMap<String,List<String>> map = new HashMap<String,List<String>>();
+ Map<Object,ArrayList<Object>> map = new HashMap<>();
   List<String> USER = new ArrayList<String>();
 
  
