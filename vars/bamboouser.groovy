@@ -1,7 +1,7 @@
 import groovy.json.*
  import groovy.json.JsonOutput
 public class user {
-private String data;
+private String udata;
  public String getdata() {
 	return udata;
 }
