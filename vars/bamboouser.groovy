@@ -59,13 +59,13 @@ println(mailcount)
 
    }
    
-	   if(USER!=null)
-	   {
+	  // if(USER!=null)
+	   //{
 	   //println(USER)
 	   SUSER[j]=(JsonOutput.toJson(USER))
 	  map.put(email,SUSER[j])
 	   USER.clear()
-	   }
+	  // }
     
     
  
