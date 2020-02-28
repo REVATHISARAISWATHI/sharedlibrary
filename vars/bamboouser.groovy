@@ -109,7 +109,7 @@ println(mailcount)
 	  //details = USER
 	for(user u:){
 		  println(u.getdata)*/
- }
+ 
 def k=0
 println(USER)
  for(j=0;j<mailcount;j++)
