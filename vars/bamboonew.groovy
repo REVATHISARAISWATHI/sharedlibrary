@@ -77,7 +77,7 @@ println(mailcount)
     //def u =new user()
    //def p = new person();
     //people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
-    USER.add(JsonOutput.toJson(resultJson.results.result[i]))
+    USER.add(resultJson.results.result[i])
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
     //p.setemail(email)
  // u.setdata(JsonOutput.toJson(resultJson.results.result[i]))
