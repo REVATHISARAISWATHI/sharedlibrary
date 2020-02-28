@@ -52,7 +52,7 @@ println(mailcount)
   // println(state)
   
  
-   def email=jsonObj.config.emails.email[j]
+  // def email=jsonObj.config.emails.email[j]
     //println(email)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
