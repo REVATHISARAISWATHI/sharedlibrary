@@ -99,6 +99,9 @@ println(mailcount)
 //println(map)
 	 def details= new user()
 	details =USER
+	for(USER u:details){
+		  println(u.getdata)
+ }
 println(USER)
 /* for
 for(i=0;i<arr.size();i++)
