@@ -118,10 +118,7 @@ def k=0
     def email=jsonObj.config.emails.email[j] 
 
   
- if(USER[i].contains(email))
-	 {
-		 u[i].email=email
-		 u[i].data=USER[i]
+ 
 	 while(arr[k]!=0){ 
 	 suser.add(USER[k])
     //map.put(email,USER[k])
