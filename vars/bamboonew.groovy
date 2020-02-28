@@ -60,7 +60,7 @@ println(mailcount)
 	def u=new string[mailcount]
    for(j=0;j<mailcount;j++)
    {
-    def email=jsonObj.config.emails.email[j] 
+   // def email=jsonObj.config.emails.email[j] 
   for(i=0;i<50;i++)
   {
  
@@ -139,11 +139,11 @@ println(mailcount)
 	
 	for(j=0;j<mailcount;j++)
 	{
-		def email=jsonObj.config.emails.email[j]
+		def email1=jsonObj.config.emails.email[j]
 			
 		for(i=0;i<USER.size();i++)
 		{
-			while(USER[i].contains(email))
+			while(USER[i].contains(email1))
 			      {
 				      u[k]=USER[i]
 				      i++
