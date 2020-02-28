@@ -96,6 +96,8 @@ println(mailcount)
    }
     arr[j]=ct
    ct=0
+	   map.put(email,USER)
+	   USER.clear()
     //println(USER)
     //map.put(email,USER )
     
@@ -115,7 +117,7 @@ def k=0
 	def r=0
 //println(USER)
 	
- for(j=1;j<mailcount;j++)
+/* for(j=1;j<mailcount;j++)
    {
     def email=jsonObj.config.emails.email[j] 
 
@@ -123,16 +125,16 @@ def k=0
  
 	 while(arr[k]!=0){ 
 		 
-	 suser.add(USER[r])
+	 suser.add(USER[r])*/
     //map.put(email,USER[k])
-		 arr[k]--
+		/* arr[k]--
 			 
 	 }
 	    map.put(email,suser)
 	   //suser.clear()
 	   r++
 
-   }
+   }*/
 	println(suser)
 println(map)
  
