@@ -6,7 +6,7 @@ private String data;
 	return data;
 }
 public void setdata(String udata) {
-	this.udata = udta;
+	this.udata = udata;
 }
 }
 
@@ -96,8 +96,8 @@ println(mailcount)
 // println(Success)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
-println(map)
-//println(USER)
+//println(map)
+println(USER)
 /* for
 for(i=0;i<arr.size();i++)
  {
