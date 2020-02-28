@@ -97,6 +97,8 @@ println(mailcount)
   // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
 
 //println(map)
+	 def details= new user()
+	details =USER
 println(USER)
 /* for
 for(i=0;i<arr.size();i++)
