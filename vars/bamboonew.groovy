@@ -143,10 +143,10 @@ println(mailcount)
 			
 		for(i=0;i<USER.size();i++)
 		{
-			while(USER[i].contains(email1))
+			if(USER[i].contains(email1))
 			      {
 				      u[k]=USER[i]
-				      i++
+				      
 					      }
 			      k++
 			      }
