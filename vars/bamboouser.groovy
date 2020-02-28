@@ -63,16 +63,19 @@ println(mailcount)
    }
     arr[j]=ct
    ct=0
+	   if(USER!=null)
+	   {
 	   //println(USER)
 	   suser[j]=(JsonOutput.toJson(USER))
-	 //  map.put(email,suser)
+	  map.put(email,suser[j])
 	   USER.clear()
+	   }
     
     
  
   }
  
-println(suser[2])
+println(map)
 	
 
 }
