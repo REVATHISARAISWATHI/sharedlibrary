@@ -1,21 +1,6 @@
 import groovy.json.*
  import groovy.json.JsonOutput
-/*public class user {
-private String udata;
-public String getdata() {
-	return udata;
-	 
-        
-}
-public void setdata(String udata) {
-	this.udata = udata;
-}
-	user()
-	{
-		email="";
-	}
-}
-*/
+
 
 def call(JSON,IP)
 {
@@ -33,8 +18,7 @@ def mailcount = jsonObj.config.emails.email.size()
 def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
-//def state=resultJson.results.result[0].buildCompletedDate
-  //println(state)
+
  def cns=0
  def cnf=0
  def ct=0
@@ -63,33 +47,16 @@ println(mailcount)
   for(i=0;i<50;i++)
   {
  
-   def date=resultJson.results.result[i].buildCompletedDate
-   //println(date)
+   
    def state=resultJson.results.result[i].buildState
-  // println(state)
   
- 
-  // def email=jsonObj.config.emails.email[j]
-    //println(email)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
-    //def u =new user()
-   //def p = new person();
-    //people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
+   
     USER.add(resultJson.results.result[i])
-   // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
-    //p.setemail(email)
- // u.setdata(JsonOutput.toJson(resultJson.results.result[i]))
-    //p.email=resultJson.results.result[j]
-    //p.data=JsonOutput.toJson(resultJson.results.result[i])
-   // USER.add(u)
-  // map.put(email,Arrays.asList(JsonOutput.toJson(resultJson.results.result[i])))
+   
     ct++
     
-    //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
- 
-    //map.put(JsonOutput.toJson(resultJson.results.result[i]),"USER"+j)
-   
     
    }
 
@@ -99,45 +66,12 @@ println(mailcount)
 	   suser[j]=(JsonOutput.toJson(USER))
 	 //  map.put(email,suser)
 	   USER.clear()
-    //println(USER)
-    //map.put(email,USER )
     
-  // println(arr[j])
-  }
- //println(cnt)
-// println(Success)
-  // USER.get(0).add(JsonOutput.toJson(resultJson.results.result[i]))
-
-//println(map)
-	/* def details= new user()
-	  //details = USER
-	for(user u:){
-		  println(u.getdata)*/
+    
  
-//def k=0
-	//def r=0
+  }
+ 
 println(suser[0])
 	
-/* for(j=1;j<mailcount;j++)
-   {
-    def email=jsonObj.config.emails.email[j] 
 
-  
- 
-	 while(arr[k]!=0){ 
-		 
-	 suser.add(USER[r])*/
-    //map.put(email,USER[k])
-		/* arr[k]--
-			 
-	 }
-	    map.put(email,suser)
-	   //suser.clear()
-	   r++
-
-   }*/
-	//println(suser)
-//println(map)
- 
- //echo "$cnt"
 }
