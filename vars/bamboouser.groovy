@@ -19,12 +19,8 @@ def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 
- def cns=0
- def cnf=0
- def ct=0
- 
-    List<String> SUCCESS = new ArrayList<String>();
-    List<String> FAILURE = new ArrayList<String>();
+
+   
  //ArrayList<Student> students = new ArrayList<Student>();
 
 //HashMap<String,List<String>> map = new HashMap<>();
@@ -33,7 +29,7 @@ def resultJson = jsonSlurper.parse(reader)
 
 
   List<String> USER = new ArrayList<String>();
-	List<String> suser = new ArrayList<String>();
+  List<String> suser = new ArrayList<String>();
 	//user [] u=new user[mailcount]
 // List<Person> people = new ArrayList<>();
 
@@ -55,14 +51,13 @@ println(mailcount)
    
     USER.add(resultJson.results.result[i])
    
-    ct++
+   
     
     
    }
 
    }
-    arr[j]=ct
-   ct=0
+   
 	   if(USER!=null)
 	   {
 	   //println(USER)
