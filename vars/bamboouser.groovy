@@ -96,7 +96,8 @@ println(mailcount)
    }
     arr[j]=ct
    ct=0
-	   map.put(email,USER)
+	   suser=USER
+	   map.put(email,suser)
 	   USER.clear()
     //println(USER)
     //map.put(email,USER )
