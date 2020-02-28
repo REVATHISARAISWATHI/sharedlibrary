@@ -113,7 +113,7 @@ println(mailcount)
 def k=0
 //println(USER)
 	List<String> suser = new ArrayList<String>();
- for(j=0;j<mailcount;j++)
+ for(j=1;j<mailcount;j++)
    {
     def email=jsonObj.config.emails.email[j] 
 
