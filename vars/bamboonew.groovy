@@ -57,7 +57,8 @@ def resultJson = jsonSlurper.parse(reader)
 
 println(mailcount)
 // def arr= new int[mailcount]
-	def u=new String[mailcount]
+	//def u=new String[mailcount]
+	def k=0
    for(j=0;j<mailcount;j++)
    {
    // def email=jsonObj.config.emails.email[j] 
@@ -77,7 +78,7 @@ println(mailcount)
     //def u =new user()
    //def p = new person();
     //people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
-    USER.add(resultJson.results.result[i])
+    USER[k].add(resultJson.results.result[i])
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
     //p.setemail(email)
  // u.setdata(JsonOutput.toJson(resultJson.results.result[i]))
@@ -93,6 +94,7 @@ println(mailcount)
    
     
    }
+	  k++
 
    }
   //  arr[j]=ct
@@ -134,7 +136,7 @@ println(mailcount)
 	   //suser.clear()
 	   r++
    }*/
-	println(USER)
+	/*println(USER)
 	println(USER.size)
 	def k=0
 	def i=0
@@ -159,5 +161,5 @@ println(mailcount)
 			      }
 
  
- //echo "$cnt"
+ //echo "$cnt"/*
 }
