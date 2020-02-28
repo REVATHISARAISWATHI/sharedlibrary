@@ -111,7 +111,7 @@ println(mailcount)
 		  println(u.getdata)*/
  
 def k=0
-println(USER)
+//println(USER)
 	List<String> suser = new ArrayList<String>();
  for(j=0;j<mailcount;j++)
    {
