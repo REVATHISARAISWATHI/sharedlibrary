@@ -18,11 +18,11 @@ def usertotal = resultJson.size()
       println(Name)
       for(i=0;i<usertotal;i++)
          {
-            if(Name==resultJson[i].name)
+            if(Name==resultJson[i].name[j])
             {
-               def id1 = resultJson[i].id 
-               println(id1)
-             return id1
+               def id1 = resultJson[i].id[i] 
+               println(id1,id2)
+             return id1,id2
             }
          }
          }
@@ -48,29 +48,29 @@ def total = resultJson.size()
 def cnt=0
 for(i=0;i<ecount;i++)
  {
-	 def mail=jsonObj.config.emails.email[i]
+	 def mail=jsonObj.config.emails.email[i][j]
   for(j=0;j<total;j++)
   {
 	 // println(jsonObj.config.emails.email[i])
 	 // println(resultJson[j].author_email)
-   if(jsonObj.config.emails.email[i]==resultJson[j].author_email)
+   if(jsonObj.config.emails.email[i]==resultJson[j].author_email[k])
    {
 	   JSON.add(resultJson[j])
 	   cnt++
      }
      }
-	 println(jsonObj.config.emails.email[i])
-	 JCOPY[i]=(JsonOutput.toJson(JSON))
-	 println(JCOPY[i])
-	 map.put(mail,JCOPY[i])
-	 JSON.clear()
+	 println(jsonObj.config.emails.email[i][j])
+	 JCOPY[i][k]=(JsonOutput.toJson(JSON))
+	 println(JCOPY[i][k])
+	 map.get(mail,JCOPY[i])
+	 USER.clear()
 	 
 	   
      }
- /* for(i=0;i<JCOPY.size();i++)
+  for(i=0;i<JCOPY.size();i++)
 	{
 		println(JCOPY[i])
-	}*/
+	}
 	println(map)
      
 }
