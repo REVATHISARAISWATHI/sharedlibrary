@@ -52,7 +52,7 @@ def resultJson = jsonSlurper.parse(reader)
 	//List<String> suser = new ArrayList<String>();
 	//user [] u=new user[mailcount]
 // List<Person> people = new ArrayList<>();
-	def USER=new String[]
+	def USER=new String[1000]
 
  
 
@@ -79,7 +79,7 @@ println(mailcount)
     //def u =new user()
    //def p = new person();
     //people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
-    USER[k]=(resultJson.results.result[i])
+    USER[k]=resultJson.results.result[i]
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
     //p.setemail(email)
  // u.setdata(JsonOutput.toJson(resultJson.results.result[i]))
