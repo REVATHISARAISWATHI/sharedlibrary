@@ -121,13 +121,13 @@ println(USER)
 	 {
 		 u[i].email=email
 		 u[i].data=USER[i]*/
-	 while(arr[i]!=0){ 
+	 while(arr[k]!=0){ 
 	 
-    map.put(email,USER[i])
-		 arr[i]--
+    map.put(email,USER[k])
+		 arr[k]--
 			 
 	 }
-	   i++
+	   k++
 
    }
 println(map)
