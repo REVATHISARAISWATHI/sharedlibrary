@@ -30,7 +30,8 @@ def resultJson = jsonSlurper.parse(reader)
 
 HashMap<String,List<String>> map = new HashMap<>();
  //Map<Object,ArrayList<Object>> map = new HashMap<>();
-  List<String> USER = new ArrayList<String>();
+  //List<String> USER = new ArrayList<String>();
+ List<Person> people = new ArrayList<>();
 
  
 
@@ -53,14 +54,14 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    //def p = new person();
-    
+    people.add(new Person(JsonOutput.toJson(resultJson.results.result[i])));
     USER.add(JsonOutput.toJson(resultJson.results.result[i]))
    // USER.collect new person(name:JsonOutput.toJson(resultJson.results.result[i]) }
    // p.setemail(email)
   // p.setdata(JsonOutput.toJson(resultJson.results.result[i]))
     //p.email=resultJson.results.result[j]
     //p.data=JsonOutput.toJson(resultJson.results.result[i])
-    map.put(email, USER)
+    map.put(email,people )
     ct++
     
     //students.add(new Student(JsonOutput.toJson(resultJson.results.result[i])));
