@@ -57,7 +57,7 @@ def resultJson = jsonSlurper.parse(reader)
 
 println(mailcount)
 // def arr= new int[mailcount]
-	def u=new string[mailcount]
+	def u=new String[mailcount]
    for(j=0;j<mailcount;j++)
    {
    // def email=jsonObj.config.emails.email[j] 
