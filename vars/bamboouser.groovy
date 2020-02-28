@@ -112,6 +112,7 @@ println(mailcount)
  
 def k=0
 println(USER)
+	List<String> suser = new ArrayList<String>();
  for(j=0;j<mailcount;j++)
    {
     def email=jsonObj.config.emails.email[j] 
@@ -122,11 +123,12 @@ println(USER)
 		 u[i].email=email
 		 u[i].data=USER[i]*/
 	 while(arr[k]!=0){ 
-	 
-    map.put(email,USER[k])
+	 suser.add(USER[k])
+    //map.put(email,USER[k])
 		 arr[k]--
 			 
 	 }
+	    map.put(email,USER[k])
 	   k++
 
    }
