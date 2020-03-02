@@ -58,7 +58,7 @@ println(mailcount)
     
     
    }
- LIST.add(email,USER)
+ LIST.add([email,USER])
 	    jsonBuilder(
 	 individual: LIST)
 	   
