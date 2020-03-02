@@ -68,8 +68,8 @@ println(mailcount)
 	 //  println(USER)
           
 	   LIST.add(email)
-	   jsonBuilder(LIST){
-	 "individual":user u ->
+	   jsonBuilder(LIST){user u ->
+	 "individual":
 		   email u.email
 	   }
 	   
