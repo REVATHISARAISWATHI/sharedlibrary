@@ -28,9 +28,9 @@ def resultJson = jsonSlurper.parse(reader)
  
 
 
-  List<String> USER = new ArrayList<String>();
-  List<String> LIST=new ArrayList<String>();
-  def SUSER=new String[mailcount]
+  List<String> USER = new ArrayList<String>()
+  List<String> LIST=new ArrayList<String>()
+  //List<String> SUSER=new ArrayList<String>()
   
 	//user [] u=new user[mailcount]
 // List<Person> people = new ArrayList<>();
@@ -60,17 +60,16 @@ println(mailcount)
     
     
    }
-	   SUSER[j]=USER
-	  cnt=SUSER.size()
-	   println(SUSER)
+	  cnt=USER.size()
+	   println(USER)
           
- LIST.add([email,SUSER[j],cnt])
+ LIST.add([email,USER,cnt])
 	    jsonBuilder(
 	 individual: LIST)
 	   
 
    USER.clear()
-	   SUSER.clear()
+	   
 	  // if(USER!=null)
 	   //{
 	   //println(USER)
