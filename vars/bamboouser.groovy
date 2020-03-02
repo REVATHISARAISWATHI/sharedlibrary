@@ -35,6 +35,7 @@ def resultJson = jsonSlurper.parse(reader)
 	List<String> LISTFAILURE=new ArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>()
     List<String> FAILURE = new ArrayList<String>()
+	JSONArray jsonArray = new JSONArray()
   //List<String> SUSER=new ArrayList<String>()
   
 	//user [] u=new user[mailcount]
@@ -69,8 +70,10 @@ println(mailcount)
    }
    }
    cns=USERS.size()
-   LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":USERS,"Success_cnt":cns]))
+	jsonArray.put(USERS)   
+   LISTSUCCESS.add(["email":email,"success":jsonArray,"Success_cnt":cns])
    USERS.clear()
+	   jsonArray.clear()
    cnf=USERF.size()
    LISTFAILURE.add(JsonOutput.toJson(["email":email,"failure":USERF,"Success_cnt":cnf]))
    USERF.clear()
@@ -96,7 +99,7 @@ println(mailcount)
    }
   }
 	
-		    jsonBuilder(
+		    jsonBuilder.bamboo(
   "success" : SUCCESS,
   "successbuild_cnt" : SUCCESS.size(),
   "failure" : FAILURE,
