@@ -67,11 +67,11 @@ println(mailcount)
 	  cnt=USER.size()
 	 //  println(USER)
           
-	   LIST.add(email)
-	  /* jsonBuilder(LIST){user u ->
+	   LIST.add[email,USER,cnt]
+	   jsonBuilder(
 	 
-		   email u.email
-	   }*/
+		  "individual":LIST
+	   )
 	   
 
    USER.clear()
@@ -83,13 +83,7 @@ println(mailcount)
     
     
  
-  }
- LIST.collect{ email -> new u(email) }
-	  jsonBuilder(LIST){user u ->
-	 
-		   email u.email
-	   }
-	   
+ 
 println(jsonBuilder)
 	
 
