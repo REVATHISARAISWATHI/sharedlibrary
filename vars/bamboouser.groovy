@@ -106,9 +106,9 @@ println(mailcount)
   )
 	def jsonS = jsonBuilder
 def jsonObj1 = readJSON text: json
-	def count=jsonObj1.bamboo.failurebuild_cnt
+	//def count=jsonObj1.bamboo.failurebuild_cnt
 
-	println(count)
+	println(jsonObj1.bamboo)
 
 //println(jsonBuilder.toPrettyString())
 	
