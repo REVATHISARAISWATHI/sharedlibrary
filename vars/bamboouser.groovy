@@ -92,7 +92,7 @@ println(mailcount)
    }
   }
 	
-		    jsonBuilder.bamboo(
+		    jsonBuilder(
   "success" : SUCCESS,
   "successbuild_cnt" : SUCCESS.size(),
   "failure" : FAILURE,
