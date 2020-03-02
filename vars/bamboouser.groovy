@@ -1,6 +1,6 @@
 import groovy.json.*
 import groovy.json.JsonOutput
-import.groovy.json.string
+
 	
 
 def call(JSON,IP)
@@ -101,7 +101,7 @@ def state=resultJson.results.result[i].buildState
   "successbuild_cnt" : SUCCESS.size(),
   "failure" : FAILURE,
   "failurebuild_cnt" :FAILURE.size(),
-  "individualsuccess": JSON.stringify(LISTSUCCESS),
+  "individualsuccess": JSON.parse(LISTSUCCESS),
   "individualfailure": LISTFAILURE
   )
 println(jsonBuilder)
