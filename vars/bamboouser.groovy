@@ -69,10 +69,10 @@ println(mailcount)
    }
    }
    cns=USERS.size()
-   LISTSUCCESS.add(["email":email,"success":USERS,"Success_cnt":cns])
+   LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":USERS,"Success_cnt":cns]))
    USERS.clear()
    cnf=USERF.size()
-   LISTFAILURE.add(["email":email,"failure":USERF,"FAilure_cnt":cnf])
+   LISTFAILURE.add(JsonOutput.toJson(["email":email,"failure":USERF,"Success_cnt":cnf]))
    USERF.clear()
    }
 	for(i=0;i<50;i++)
@@ -104,9 +104,12 @@ println(mailcount)
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
+def res = jsonSlurper.parse(jsonBuilder)
+	def count=res.bamboo.failurebuild_cnt
 
+	println(count)
 
-println(jsonBuilder.toPrettyString())
+//println(jsonBuilder.toPrettyString())
 	
 
 }
