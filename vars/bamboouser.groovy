@@ -60,7 +60,7 @@ println(mailcount)
     
     
    }
-	def  cnt=USER.size()
+	cnt=USER.size()
 	 //  println(USER)
           
 	   LIST.add[email,USER,cnt]
