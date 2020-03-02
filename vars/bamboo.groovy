@@ -51,7 +51,7 @@ def json_beauty = JsonOutput.prettyPrint(json_str)
 File file = new File(filename)
 file.write(json_beauty)*/
    //List<String> JSON = new ArrayList<String>();
-   SUCCESS.add(JsonOutput.toJson(resultJson.results.result[i]))
+   SUCCESS.add(resultJson.results.result[i])
       //def jsonString = JSON
    //def jsonObj = readJSON text: JSON
  
@@ -64,7 +64,7 @@ file.write(json_beauty)*/
    else if(state.equals("Failed"))
    {
     cnf++
-       FAILURE.add(JsonOutput.toJson(resultJson.results.result[i]))
+       FAILURE.add(resultJson.results.result[i])
      
    }
   }
@@ -72,5 +72,7 @@ file.write(json_beauty)*/
 // println(Success)
  println(cnf)
  println(FAILURE)
+ def json = JsonOutput.toJson({success : SUCCESS,successbuild cnt : SUCCESS.size(),failure : FAILURE,failurebuild cnt : FAILURE.size()})
+ println(json)
  //echo "$cnt"
 }
