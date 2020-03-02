@@ -68,10 +68,10 @@ println(mailcount)
    }
    }
    cns=USERS.size()
-   LISTSUCCESS.add(["email":email,"success":USERS,"Success_cnt":cns])
+   LISTSUCCESS.add(["email":email,"success":JSON.stringify(USERS),"Success_cnt":cns])
    USERS.clear()
    cnf=USERF.size()
-   LISTFAILURE.add(["email":email,"failure":USERF,"Success_cnt":cnf])
+   LISTFAILURE.add(["email":email,"failure":JSON.stringify(USERF),"Success_cnt":cnf])
    USERF.clear()
    }
 	for(i=0;i<50;i++)
