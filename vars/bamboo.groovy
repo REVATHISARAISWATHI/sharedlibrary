@@ -72,7 +72,7 @@ file.write(json_beauty)*/
 // println(Success)
  println(cnf)
  println(FAILURE)
- def json = JsonOutput.toJson({success : SUCCESS,successbuild cnt : SUCCESS.size(),failure : FAILURE,failurebuild cnt : FAILURE.size()})
+ def json = JsonOutput.toJson({success : 'SUCCESS',successbuild cnt : 'SUCCESS.size()',failure : 'FAILURE',failurebuild cnt : 'FAILURE.size()'})
  println(json)
  //echo "$cnt"
 }
