@@ -31,8 +31,8 @@ HashMap<String,List<String>> map = new HashMap<>();
   List<String> USER = new ArrayList<String>();
   List<String> SUSER = new ArrayList<String>();
   
-	user [] u=new user[mailcount]
-List<Person> people = new ArrayList<>();
+	//user [] u=new user[mailcount]
+//List<Person> people = new ArrayList<>();
 
  
 
@@ -50,7 +50,7 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
-    USER[j].add(resultJson.results.result[i])
+    USER.add(resultJson.results.result[i])
    
    
     
@@ -59,7 +59,7 @@ println(mailcount)
 
    }
    
-	   if(USER!=null)
+	  // if(USER!=null)
 	   {
 	   println(USER[i][j])
 	   person[k]=(JsonOutput.toJson(USER))
