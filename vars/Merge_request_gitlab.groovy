@@ -62,7 +62,7 @@ def total = resultJson.size()
 	// "individual":LIST
   
   )
-File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/output1.json")
+File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/merge.json")
 	file.write(jsonBuilder.toPrettyString())
 }
 
