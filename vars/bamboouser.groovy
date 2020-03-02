@@ -1,10 +1,6 @@
 import groovy.json.*
  import groovy.json.JsonOutput
-class user
-{
-	String email
-	int cnt
-}
+	
 
 def call(JSON,IP)
 {
@@ -64,7 +60,7 @@ println(mailcount)
     
     
    }
-	  cnt=USER.size()
+	def  cnt=USER.size()
 	 //  println(USER)
           
 	   LIST.add[email,USER,cnt]
