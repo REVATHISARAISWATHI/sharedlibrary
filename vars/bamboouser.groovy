@@ -106,7 +106,7 @@ def state=resultJson.results.result[i].buildState
   "individualfailure": LISTFAILURE
   )
 
-def key = "/";
+def key = "\";
 delete jsonBuilder[key];
 println(jsonBuilder.toPrettyString())
 	
