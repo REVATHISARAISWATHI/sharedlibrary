@@ -1,5 +1,6 @@
 import groovy.json.*
 import groovy.json.JsonOutput
+import groovy.json.JSONArray
 
 	
 
@@ -30,7 +31,7 @@ def resultJson = jsonSlurper.parse(reader)
 	List<String> LISTFAILURE=new ArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>()
     List<String> FAILURE = new ArrayList<String>()
-	//def JSONArray jsonArray = new JSONArray()
+	def JSONArray jsonArray = new JSONArray()
 
 
  
@@ -62,8 +63,8 @@ println(mailcount)
    }
    }
    cns=USERS.size()
-	JSONArray js = new JSONArray(USERS);
-   LISTSUCCESS.add(["email":email,"success":js,"Success_cnt":cns])
+	jsonArray.put(USERS)   
+   LISTSUCCESS.add(["email":email,"success":jsonArray,"Success_cnt":cns])
    USERS.clear()
 	   jsonArray.clear()
    cnf=USERF.size()
