@@ -105,7 +105,7 @@ def jsonObj1 = readJSON text: json
 
 	println(jsonObj1)*/
 
-println(jsonBuilder.replaceAll('\','/'))
+println(jsonBuilder.replaceAll(\","))
 	
 
 }
