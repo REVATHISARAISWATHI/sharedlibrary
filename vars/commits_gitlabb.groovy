@@ -60,27 +60,25 @@ for(i=0;i<ecount;i++)
 	   cnt++
      }
      }
-	 println(jsonObj.config.emails.email[i])
+	// println(jsonObj.config.emails.email[i])
 	 cnt=JSON.size()
 	 LIST.add(["email":email,"Commit":JsonOutput.toJson(JSON),"Commit_cnt":cnt])
-	   jsonBuilder.gitlab(
-	 
-		  "individual":LIST
-	   )
+	
 	 //JCOPY[i]=(JsonOutput.toJson(JSON))
 	// println(JCOPY[i])
 	 JSON.clear()
 	 
 	   
      }
-  for(i=0;i<JCOPY.size();i++)
+ /* for(i=0;i<JCOPY.size();i++)
 	{
 		println(JCOPY[i])
 	}
-    
+    */
  jsonBuilder.gitlab(
   "commit" : resultJson,
-  "commit_cnt" : resultJson.size()
+  "commit_cnt" : resultJson.size(),
+	 "individual":LIST
   
   )
  println(jsonBuilder)
