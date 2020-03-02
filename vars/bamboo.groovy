@@ -72,7 +72,11 @@ file.write(json_beauty)*/
 // println(Success)
  println(cnf)
  println(FAILURE)
- def json = {"success" : SUCCESS,"successbuild_cnt" : SUCCESS.size(),"failure" : FAILURE,"failurebuild_cnt" : FAILURE.size()}
- println(json)
+ var jsonArray;
+jsonArray.push($("#success").SUCCESS;
+jsonArray.push($("#FAILURE").FAILURE;
+var my = JSON.stringify(jsonArray);
+ //def json = {"success" : SUCCESS,"successbuild_cnt" : SUCCESS.size(),"failure" : FAILURE,"failurebuild_cnt" : FAILURE.size()}
+ println(my)
  //echo "$cnt"
 }
