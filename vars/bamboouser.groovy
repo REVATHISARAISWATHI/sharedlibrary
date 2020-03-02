@@ -58,13 +58,13 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
-    USERS.add(JsonOutput.toJson(resultJson.results.result[i]))
+    USERS.add(resultJson.results.result[i])
 	  
    }
    else if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Failed"))
    {
 	   
-	   USERF.add(JsonOutput.toJson(resultJson.results.result[i]))
+	   USERF.add(resultJson.results.result[i])
    }
    }
    cns=USERS.size()
