@@ -62,8 +62,9 @@ println(mailcount)
    }
 	   SUSER=USER.clone()
 	  cnt=SUSER.size()
+	   println(SUSER)
           
- LIST.add([email,SUSER,cnt])
+ LIST.add(email,SUSER,cnt)
 	    jsonBuilder(
 	 individual: LIST)
 	   
