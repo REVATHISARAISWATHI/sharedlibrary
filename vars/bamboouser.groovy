@@ -51,18 +51,19 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
+    USER.add(resultJson.results.result[i])
+	  
+   }
+	  
     
-	   def list=[email,resultJson.results.result[i]]
+    
+   }
+ def list=[email,USER]
 	    jsonBuilder(
 	 individual: list)
 	   
 
-    
-    
-   }
-
-   }
-   
+   USER.clear()
 	  // if(USER!=null)
 	   //{
 	   //println(USER)
