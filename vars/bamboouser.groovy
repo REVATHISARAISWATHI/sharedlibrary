@@ -64,6 +64,8 @@ println(mailcount)
 	   //println(USER)
 	   SUSER[j]=(JsonOutput.toJson(USER))
 	def list=[SUSER[j]]
+	    jsonBuilder(
+	 individual: list)
 	   
 	   USER.clear()
 	  
@@ -71,10 +73,7 @@ println(mailcount)
     
  
   }
-  jsonBuilder(
-	 individual: list
-  
-  )
+ 
 println(jsonBuilder)
 	
 
