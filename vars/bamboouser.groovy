@@ -78,8 +78,7 @@ println(mailcount)
 	for(i=0;i<50;i++)
   {
    def date=resultJson.results.result[i].buildCompletedDate
-   
-def state=resultJson.results.result[i].buildState
+   def state=resultJson.results.result[i].buildState
 
    
   if(state.equals("Successful"))
@@ -106,7 +105,7 @@ def state=resultJson.results.result[i].buildState
   "individualfailure": LISTFAILURE
   )
 
-jsonBuilder=jsonBuilder.replace("/")
+
 println(jsonBuilder.toPrettyString())
 	
 
