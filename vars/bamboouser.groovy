@@ -69,7 +69,7 @@ println(mailcount)
           
 	   LIST.add(email)
 	   jsonBuilder(LIST){user u ->
-	 "individual":
+	 
 		   email u.email
 	   }
 	   
