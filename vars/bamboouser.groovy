@@ -67,7 +67,7 @@ println(mailcount)
 	  cnt=USER.size()
 	 //  println(USER)
           
-	   LIST.add(email)
+	   LIST.add(email).collect{ email -> new u(email) }
 	   jsonBuilder(LIST){user u ->
 	 
 		   email u.email
