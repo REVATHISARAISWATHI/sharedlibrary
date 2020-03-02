@@ -63,7 +63,7 @@ def resultJson = jsonSlurper.parse(reader)
    }
    cns=USERS.size()
 	  
-   LISTSUCCESS.add(JsonOutput.toJson["email":email,"success":USERS,"Success_cnt":cns]))
+   LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":USERS,"Success_cnt":cns]))
    USERS.clear()
 	 
    cnf=USERF.size()
