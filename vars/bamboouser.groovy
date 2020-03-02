@@ -84,7 +84,7 @@ println(mailcount)
     
  
   }
- LIST.collect{ email -> new user(email) }
+ LIST.collect{ email -> new u(email) }
 	  jsonBuilder(LIST){user u ->
 	 
 		   email u.email
