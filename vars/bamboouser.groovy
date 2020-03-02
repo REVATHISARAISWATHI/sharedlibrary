@@ -21,10 +21,10 @@ def resultJson = jsonSlurper.parse(reader)
 
 
    
- ArrayList<Student> students = new ArrayList<Student>();
+ //ArrayList<Student> students = new ArrayList<Student>();
 
-HashMap<String,List<String>> map = new HashMap<>();
- Map<Object,ArrayList<Object>> map = new HashMap<>();
+//HashMap<String,List<String>> map = new HashMap<>();
+ //Map<Object,ArrayList<Object>> map = new HashMap<>();
  Map<String, List<String>> map = new HashMap<String, List<String>>();
 
 
@@ -32,7 +32,7 @@ HashMap<String,List<String>> map = new HashMap<>();
   List<String> SUSER = new ArrayList<String>();
   
 	//user [] u=new user[mailcount]
-//List<Person> people = new ArrayList<>();
+// List<Person> people = new ArrayList<>();
 
  
 
@@ -60,11 +60,11 @@ println(mailcount)
    }
    
 	  // if(USER!=null)
-	   {
-	   println(USER[i][j])
-	   person[k]=(JsonOutput.toJson(USER))
-	  map.USER(email,SUSER[j])
-	   map.clear()
+	   //{
+	   //println(USER)
+	   SUSER[j]=(JsonOutput.toJson(USER))
+	  map.put(email,SUSER[j])
+	   USER.clear()
 	  // }
     
     
