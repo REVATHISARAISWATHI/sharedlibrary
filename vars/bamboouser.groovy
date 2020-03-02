@@ -21,11 +21,6 @@ def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/
 def resultJson = jsonSlurper.parse(reader)
 
 
-   
- //ArrayList<Student> students = new ArrayList<Student>();
-
-//HashMap<String,List<String>> map = new HashMap<>();
- //Map<Object,ArrayList<Object>> map = new HashMap<>();
  
 
 
@@ -35,17 +30,14 @@ def resultJson = jsonSlurper.parse(reader)
 	List<String> LISTFAILURE=new ArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>()
     List<String> FAILURE = new ArrayList<String>()
-	JSONArray jsonArray = new JSONArray()
-  //List<String> SUSER=new ArrayList<String>()
-  
-	//user [] u=new user[mailcount]
-// List<Person> people = new ArrayList<>();
+	def JSONArray jsonArray = new JSONArray()
+
 
  
 
 println(mailcount)
 	def jsonBuilder = new groovy.json.JsonBuilder()
-// def arr= new int[mailcount]
+
    for(j=0;j<mailcount;j++)
    {
 	   def cns=0
