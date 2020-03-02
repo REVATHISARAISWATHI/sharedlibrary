@@ -110,7 +110,7 @@ def jsonObj1 = readJSON text: json
 
 	println(jsonObj1)*/
 
-println(JSONOutput.toJson(jsonBuilder))
+println(JsonOutput.toJson(jsonBuilder))
 	
 
 }
