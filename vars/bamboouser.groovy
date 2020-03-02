@@ -1,7 +1,5 @@
 import groovy.json.*
 import groovy.json.JsonOutput
-import groovy.json.JsonBuilder
-
 
 	
 
@@ -107,7 +105,7 @@ def jsonObj1 = readJSON text: json
 
 	println(jsonObj1)*/
 
-println(JsonOutput.toJson(jsonBuilder))
+println(JsonOutput.toString(jsonBuilder))
 	
 
 }
