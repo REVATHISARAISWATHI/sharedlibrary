@@ -63,7 +63,7 @@ for(i=0;i<ecount;i++)
 	 println(jsonObj.config.emails.email[i])
 	 cnt=JSON.size()
 	 LIST.add(["email":email,"Commit":JsonOutput.toJson(JSON),"Commit_cnt":cnt])
-	   jsonBuilder(
+	   jsonBuilder.gitlab(
 	 
 		  "individual":LIST
 	   )
