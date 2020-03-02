@@ -71,8 +71,8 @@ println(mailcount)
     
  
   }
-  jsonBuilder.bamboo(
-	 "individual":list
+  jsonBuilder(
+	 individual: list
   
   )
 println(jsonBuilder)
