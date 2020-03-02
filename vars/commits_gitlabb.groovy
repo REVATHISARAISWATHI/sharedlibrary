@@ -46,6 +46,7 @@ def total = resultJson.size()
       List<String> JCOPY = new ArrayList<String>();
 	 List<String> LIST = new ArrayList<String>();
 def cnt=0
+	 def jsonBuilder = new groovy.json.JsonBuilder()
 for(i=0;i<ecount;i++)
  {
 	def email=jsonObj.config.emails.email[i] 
@@ -76,7 +77,7 @@ for(i=0;i<ecount;i++)
 	{
 		println(JCOPY[i])
 	}
-     def jsonBuilder = new groovy.json.JsonBuilder()
+    
  jsonBuilder.gitlab(
   "commit" : resultJson,
   "commit_cnt" : resultJson.size()
