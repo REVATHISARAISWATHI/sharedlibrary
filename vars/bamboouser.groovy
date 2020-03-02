@@ -104,8 +104,9 @@ println(mailcount)
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
-def res = jsonSlurper.parse(jsonBuilder)
-	def count=res.bamboo.failurebuild_cnt
+	def jsonString = jsonBuilder
+def jsonObj = readJSON text: jsonString
+	def count=jsonObj.bamboo.failurebuild_cnt
 
 	println(count)
 
