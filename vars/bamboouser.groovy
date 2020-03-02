@@ -52,10 +52,7 @@ println(mailcount)
    {
    
     USER.add(resultJson.results.result[i])
- jsonBuilder.bamboo(
-	 "individual":["email" :email,"successbuilds":USER]
-  
-  )
+
     
     
    }
@@ -66,7 +63,7 @@ println(mailcount)
 	   //{
 	   //println(USER)
 	   SUSER[j]=(JsonOutput.toJson(USER))
-	
+	def list=[SUSER[j]]
 	   
 	   USER.clear()
 	  
@@ -74,7 +71,10 @@ println(mailcount)
     
  
   }
- 
+  jsonBuilder.bamboo(
+	 "individual":list
+  
+  )
 println(jsonBuilder)
 	
 
