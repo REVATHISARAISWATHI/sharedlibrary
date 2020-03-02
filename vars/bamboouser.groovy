@@ -96,7 +96,7 @@ def state=resultJson.results.result[i].buildState
      
    }
   }
-	def res=JSON.stringify(LISTSUCCESS)
+	
 		    jsonBuilder.bamboo(
   "success" : SUCCESS,
   "successbuild_cnt" : SUCCESS.size(),
