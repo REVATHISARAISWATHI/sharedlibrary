@@ -66,7 +66,7 @@ def resultJson = jsonSlurper.parse(reader)
 	  
    LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":USERS,"Success_cnt":cns]))
    USERS.clear()
-	   jsonArray.clear()
+	 
    cnf=USERF.size()
    LISTFAILURE.add(JsonOutput.toJson(["email":email,"failure":USERF,"Success_cnt":cnf]))
    USERF.clear()
