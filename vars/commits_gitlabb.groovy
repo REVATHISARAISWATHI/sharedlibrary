@@ -72,5 +72,12 @@ for(i=0;i<ecount;i++)
 		println(JCOPY[i])
 	}
 	println(map)
+	 def jsonBuilder = new groovy.json.JsonBuilder()
+ jsonBuilder.gitlab(
+  "commit" : resultJson,
+  "commit_cnt" : resultJson.size()
+  
+  )
+ println(jsonBuilder)
      
 }
