@@ -41,5 +41,29 @@ def commit(ids1){
 def resultJson = jsonSlurper.parse(reader)
 def total = resultJson.size()
    println(total)
+      // List<String> JSON = new ArrayList<String>();
+      def jsonBuilder = new groovy.json.JsonBuilder()
+     /* for(i=0;i<ecount;i++)
+ {
+	def email=jsonObj.config.emails.email[i] 
+  for(j=0;j<total;j++)
+  {
+	 // println(jsonObj.config.emails.email[i])
+	 // println(resultJson[j].author_email)
+   if(email==resultJson[j].author_email)
+   {
+	   JSON.add(JsonOutput.toJson(resultJson[j]))
+	  
+     }
+     }*/
+        jsonBuilder.gitlab(
+  "merge" : resultJson,
+  "merge_cnt" : resultJson.size(),
+	// "individual":LIST
+  
+  )
+File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/output1.json")
+	file.write(jsonBuilder.toPrettyString())
 }
+
 
