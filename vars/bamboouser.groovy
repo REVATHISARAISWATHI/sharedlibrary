@@ -37,6 +37,7 @@ def resultJson = jsonSlurper.parse(reader)
  
 
 println(mailcount)
+	def jsonBuilder = new groovy.json.JsonBuilder()
  def arr= new int[mailcount]
    for(j=0;j<mailcount;j++)
    {
@@ -51,10 +52,8 @@ println(mailcount)
    {
    
     USER.add(resultJson.results.result[i])
-   
-    def jsonBuilder = new groovy.json.JsonBuilder()
  jsonBuilder.bamboo(
-	 "individual":["email" :email,"successbuilds":USER]
+	 "individual":"email" :email,"successbuilds":USER
   
   )
     
