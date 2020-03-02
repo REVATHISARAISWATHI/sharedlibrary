@@ -44,6 +44,7 @@ def total = resultJson.size()
       //println(JsonOutput.toJson(resultJson))
       List<String> JSON = new ArrayList<String>();
       List<String> JCOPY = new ArrayList<String>();
+	 List<String> LIST = new ArrayList<String>();
 def cnt=0
 for(i=0;i<ecount;i++)
  {
@@ -59,8 +60,14 @@ for(i=0;i<ecount;i++)
      }
      }
 	 println(jsonObj.config.emails.email[i])
-	 JCOPY[i]=(JsonOutput.toJson(JSON))
-	 println(JCOPY[i])
+	 cnt=JSON.size()
+	 LIST.add(["email":email,"Commit":JsonOutput.toJson(JSON),"Commit_cnt":cnt])
+	   jsonBuilder(
+	 
+		  "individual":LIST
+	   )
+	 //JCOPY[i]=(JsonOutput.toJson(JSON))
+	// println(JCOPY[i])
 	 JSON.clear()
 	 
 	   
