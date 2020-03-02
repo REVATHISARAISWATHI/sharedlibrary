@@ -63,9 +63,9 @@ println(mailcount)
 	  cnt=USER.size()
 	   println(USER)
           
- LIST.add(email,JsonOutput.toJson(USER),cnt)
+// LIST.add(email,JsonOutput.toJson(USER),cnt)
 	    jsonBuilder(
-	 individual:[LIST] )
+	 individual:["email":email,"Success":JsonOutput.toJson(USER),"Success_cnt":cnt] )
 	   
 
    USER.clear()
