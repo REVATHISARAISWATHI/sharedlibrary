@@ -105,8 +105,8 @@ def jsonObj1 = readJSON text: json
 
 	//println(jsonObj1)
 String a=jsonObj1.individualsuccess
-String jsonBuilder=a.replaceAll("\"," ");
-				   println(jsonBuilder)
+String jsonBuilder1=a.replaceAll("\"," ");
+				   println(jsonBuilder1)
 	
 
 }
