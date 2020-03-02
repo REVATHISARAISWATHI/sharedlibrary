@@ -104,9 +104,9 @@ println(mailcount)
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
-	def jsonString = jsonBuilder
-def jsonObj = readJSON text: jsonString
-	def count=jsonObj.bamboo.failurebuild_cnt
+	def jsonS = jsonBuilder
+def jsonObj1 = readJSON text: json
+	def count=jsonObj1.bamboo.failurebuild_cnt
 
 	println(count)
 
