@@ -1,6 +1,10 @@
 import groovy.json.*
  import groovy.json.JsonOutput
-
+class user
+{
+	String email
+	int cnt
+}
 
 def call(JSON,IP)
 {
@@ -61,11 +65,13 @@ println(mailcount)
     
    }
 	  cnt=USER.size()
-	   println(USER)
+	 //  println(USER)
           
-// LIST.add(email,JsonOutput.toJson(USER),cnt)
-	    jsonBuilder(
-	 individual:(["email":email,"Success":JsonOutput.toJson(USER),"Success_cnt":cnt]) )
+	   LIST.add(email)
+	   jsonBuilder(LIST){
+	 "individual":user u ->
+		   email u.email
+	   }
 	   
 
    USER.clear()
