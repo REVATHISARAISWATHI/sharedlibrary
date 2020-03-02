@@ -29,10 +29,10 @@ def resultJson = jsonSlurper.parse(reader)
  
 
 
-  List<String> USERS = new JSONArrayList<String>()
-	List<String> USERF = new JSONArrayList<String>()
-  List<String> LISTSUCCESS=new JSONArrayList<String>()
-	List<String> LISTFAILURE=new JSONArrayList<String>()
+  def USERS = new JSONArray<String>()
+	List<String> USERF = new ArrayList<String>()
+  def LISTSUCCESS=new JSONArray<String>()
+	List<String> LISTFAILURE=new ArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>();
     List<String> FAILURE = new ArrayList<String>();
   //List<String> SUSER=new ArrayList<String>()
