@@ -36,5 +36,12 @@ def commit(ids1){
 def resultJson = jsonSlurper.parse(reader)
 def total = resultJson.size()
    println(total)
+      def jsonBuilder = new groovy.json.JsonBuilder()
+       jsonBuilder.gitlab(
+  "merge" : resultJson,
+  "merge_cnt" : resultJson.size(),
       //println(JsonOutput.toJson(resultJson))
+)
+File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/merge.json")
+	file.write(jsonBuilder.toPrettyString())
 }
