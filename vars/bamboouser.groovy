@@ -105,7 +105,7 @@ def state=resultJson.results.result[i].buildState
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
-println(jsonBuilder.toPrettyString())
+println(jsonBuilder)
 	
 
 }
