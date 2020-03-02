@@ -52,7 +52,11 @@ println(mailcount)
    
     USER.add(resultJson.results.result[i])
    
-   
+    def jsonBuilder = new groovy.json.JsonBuilder()
+ jsonBuilder.bamboo(
+	 "individual":["email" :email,"successbuilds":USER]
+  
+  )
     
     
    }
@@ -63,6 +67,7 @@ println(mailcount)
 	   //{
 	   //println(USER)
 	   SUSER[j]=(JsonOutput.toJson(USER))
+	
 	   
 	   USER.clear()
 	  
@@ -71,7 +76,7 @@ println(mailcount)
  
   }
  
-println(SUSER[1])
+println(jsonBuilder)
 	
 
 }
