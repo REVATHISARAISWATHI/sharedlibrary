@@ -70,15 +70,15 @@ file.write(json_beauty)*/
   }
  //println(cnt)
 // println(Success)
- println(cnf)
+ //println(cnf)
  //println(FAILURE)
 
  def jsonBuilder = new groovy.json.JsonBuilder()
  jsonBuilder.output1(
-  "success" : "$(SUCCESS)",
-  "successbuild_cnt" : "$(SUCCESS.size())",
-  "failure" : "$(FAILURE)",
-  "failurebuild_cnt" : "($FAILURE.size())"
+  "success" : SUCCESS,
+  "successbuild_cnt" : SUCCESS.size(),
+  "failure" : FAILURE,
+  "failurebuild_cnt" :FAILURE.size()
   )
  println(jsonBuilder)
  //echo "$cnt"
