@@ -29,10 +29,10 @@ def resultJson = jsonSlurper.parse(reader)
  
 
 
-  List<String> USERS = new ArrayList<String>()
-	List<String> USERF = new ArrayList<String>()
-  List<String> LISTSUCCESS=new ArrayList<String>()
-	List<String> LISTFAILURE=new ArrayList<String>()
+  List<String> USERS = new JSONArrayList<String>()
+	List<String> USERF = new JSONArrayList<String>()
+  List<String> LISTSUCCESS=new JSONArrayList<String>()
+	List<String> LISTFAILURE=new JSONArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>();
     List<String> FAILURE = new ArrayList<String>();
   //List<String> SUSER=new ArrayList<String>()
@@ -59,7 +59,7 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
-    USERS.add(JsonOutput.toJson(resultJson.results.result[i]))
+    USERS.add(resultJson.results.result[i])
 	  
    }
    else if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Failed"))
@@ -69,7 +69,7 @@ println(mailcount)
    }
    }
    cns=USERS.size()
-   LISTSUCCESS.add(["email":email,"success":JSON.parse(USERS),"Success_cnt":cns])
+   LISTSUCCESS.add(["email":email,"success":USERS,"Success_cnt":cns])
    USERS.clear()
    cnf=USERF.size()
    LISTFAILURE.add(JsonOutput.toJson(["email":email,"failure":USERF,"Success_cnt":cnf]))
@@ -102,7 +102,7 @@ def state=resultJson.results.result[i].buildState
   "successbuild_cnt" : SUCCESS.size(),
   "failure" : FAILURE,
   "failurebuild_cnt" :FAILURE.size(),
-  "individualsuccess": res,
+  "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
 println(jsonBuilder)
