@@ -81,5 +81,6 @@ for(i=0;i<ecount;i++)
 	 "individual":LIST
   
   )
- println(jsonBuilder)
+File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/output1.json")
+	file.write(jsonBuilder.toPrettyString())
 }
