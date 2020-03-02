@@ -100,7 +100,7 @@ def state=resultJson.results.result[i].buildState
   "successbuild_cnt" : SUCCESS.size(),
   "failure" : FAILURE,
   "failurebuild_cnt" :FAILURE.size(),
-  "individualsuccess": LISTSUCESS,
+  "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
 println(jsonBuilder)
