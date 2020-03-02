@@ -99,13 +99,13 @@ def resultJson = jsonSlurper.parse(reader)
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
-	/*def json = jsonBuilder
+	def json = jsonBuilder
 def jsonObj1 = readJSON text: json
 	//def count=jsonObj1.bamboo.failurebuild_cnt
 
-	println(jsonObj1)*/
-
-jsonBuilder=jsonBuilder.individualsuccess.replaceAll("\"," ");
+	//println(jsonObj1)
+String a=jsonObj1.individualsuccess
+String jsonBuilder=a.replaceAll("\"," ");
 				   println(jsonBuilder)
 	
 
