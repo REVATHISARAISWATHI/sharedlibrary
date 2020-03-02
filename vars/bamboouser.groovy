@@ -29,9 +29,9 @@ def resultJson = jsonSlurper.parse(reader)
  
 
 
-  def USERS = new JSONArray()
+  List<String> USERS = new ArrayList<String>()()
 	List<String> USERF = new ArrayList<String>()
-  def LISTSUCCESS=new JSONArray()
+ List<String>  LISTSUCCESS=new ArrayList<String>()
 	List<String> LISTFAILURE=new ArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>();
     List<String> FAILURE = new ArrayList<String>();
@@ -105,7 +105,7 @@ def state=resultJson.results.result[i].buildState
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
-println(jsonBuilder)
+println(jsonBuilder.toPrettyString())
 	
 
 }
