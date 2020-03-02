@@ -28,8 +28,12 @@ def resultJson = jsonSlurper.parse(reader)
  
 
 
-  List<String> USER = new ArrayList<String>()
-  List<String> LIST=new ArrayList<String>()
+  List<String> USERS = new ArrayList<String>()
+	List<String> USERF = new ArrayList<String>()
+  List<String> LISTSUCCESS=new ArrayList<String>()
+	List<String> LISTFAILURE=new ArrayList<String>()
+	List<String> SUCCESS = new ArrayList<String>();
+    List<String> FAILURE = new ArrayList<String>();
   //List<String> SUSER=new ArrayList<String>()
   
 	//user [] u=new user[mailcount]
@@ -42,7 +46,8 @@ println(mailcount)
 // def arr= new int[mailcount]
    for(j=0;j<mailcount;j++)
    {
-	   def cnt=0
+	   def cns=0
+	   def cnf=0
     def email=jsonObj.config.emails.email[j] 
   for(i=0;i<50;i++)
   {
@@ -53,33 +58,51 @@ println(mailcount)
    if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Successful"))
    {
    
-    USER.add(resultJson.results.result[i])
+    USERS.add(resultJson.results.result[i])
 	  
    }
-	  
-    
-    
-   }
-	cnt=USER.size()
-	 //  println(USER)
-          
-	   LIST.add(["email":email,"success":JsonOutput.toJson(USER),"Success_cnt":cnt])
-	   jsonBuilder(
-	 
-		  "individual":LIST
-	   )
+   else if(resultJson.results.result[i].buildReason.contains(email) && state.equals("Failed"))
+   {
 	   
+	   USERF.add(resultJson.results.result[i])
+   }
+   }
+   cns=USERS.size()
+   LISTSUCCESS.add(["email":email,"success":JsonOutput.toJson(USERS),"Success_cnt":cns])
+   USERS.clear()
+   cnf=USERF.size()
+   LISTFAILURE.add(["email":email,"failure":JsonOutput.toJson(USERF,"Success_cnt":cnf])
+   USERF.clear()
+   }
+	for(i=0;i<50;i++)
+  {
+   def date=resultJson.results.result[i].buildCompletedDate
+   
+def state=resultJson.results.result[i].buildState
 
-   USER.clear()
-	   
-	  // if(USER!=null)
-	   //{
-	   //println(USER)
-	   
-    
-    
+   
+  if(state.equals("Successful"))
+  {
+   
  
+   SUCCESS.add(resultJson.results.result[i])
+     
+  }
+   else if(state.equals("Failed"))
+   {
+    
+       FAILURE.add(resultJson.results.result[i])
+     
    }
+  }
+		    jsonBuilder.bamboo(
+  "success" : SUCCESS,
+  "successbuild_cnt" : SUCCESS.size(),
+  "failure" : FAILURE,
+  "failurebuild_cnt" :FAILURE.size(),
+  "individualsuccess": LISTSUCESS,
+  "individualfailure": LISTFAILURE
+  )
 println(jsonBuilder)
 	
 
