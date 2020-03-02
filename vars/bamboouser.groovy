@@ -31,12 +31,12 @@ def resultJson = jsonSlurper.parse(reader)
 	List<String> LISTFAILURE=new ArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>()
     List<String> FAILURE = new ArrayList<String>()
-	def JSONArray jsonArray = new JSONArray()
+	
 
 
  
 
-println(mailcount)
+
 	def jsonBuilder = new groovy.json.JsonBuilder()
 
    for(j=0;j<mailcount;j++)
@@ -63,8 +63,8 @@ println(mailcount)
    }
    }
    cns=USERS.size()
-	jsonArray.put(USERS)   
-   LISTSUCCESS.add(["email":email,"success":jsonArray,"Success_cnt":cns])
+	  
+   LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":USERS,"Success_cnt":cns]))
    USERS.clear()
 	   jsonArray.clear()
    cnf=USERF.size()
@@ -106,7 +106,7 @@ def jsonObj1 = readJSON text: json
 
 	println(jsonObj1)*/
 
-println(JsonOutput.toJson(jsonBuilder))
+println(JSON.stringify(jsonBuilder))
 	
 
 }
