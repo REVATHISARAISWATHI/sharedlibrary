@@ -30,7 +30,7 @@ def resultJson = jsonSlurper.parse(reader)
 
   List<String> USER = new ArrayList<String>();
   List<String> LIST=new ArrayList<String>();
-  List<String> SUSER=new ArrayList<String>();
+  def SUSER=new <String>[mailcount];
   
 	//user [] u=new user[mailcount]
 // List<Person> people = new ArrayList<>();
@@ -39,7 +39,7 @@ def resultJson = jsonSlurper.parse(reader)
 
 println(mailcount)
 	def jsonBuilder = new groovy.json.JsonBuilder()
- def arr= new int[mailcount]
+// def arr= new int[mailcount]
    for(j=0;j<mailcount;j++)
    {
 	   def cnt=0
@@ -60,11 +60,11 @@ println(mailcount)
     
     
    }
-	   SUSER=USER.clone()
+	   SUSER[j]=USER
 	  cnt=SUSER.size()
 	   println(SUSER)
           
- LIST.add([email,SUSER,cnt])
+ LIST.add([email,SUSER[j],cnt])
 	    jsonBuilder(
 	 individual: LIST)
 	   
