@@ -73,7 +73,7 @@ def resultJson = jsonSlurper.parse(reader)
    USERS.clear()
 	 
    cnf=USERF.size()
-   LISTFAILURE.add(["email":email,"failure":LISF[j],"Success_cnt":cnf])
+   LISTFAILURE.add(["email":email,"failure":LISF[j],"Failure_cnt":cnf])
    USERF.clear()
    }
 	for(i=0;i<50;i++)
@@ -98,10 +98,10 @@ def resultJson = jsonSlurper.parse(reader)
   }
 	//LISTSUCCESS=LISTSUCCESS.toString()
 		    jsonBuilder(
-  "success" : SUCCESS,
-  "successbuild_cnt" : SUCCESS.size(),
-  "failure" : FAILURE,
-  "failurebuild_cnt" :FAILURE.size(),
+  "teamsuccess" : SUCCESS,
+  "teamsuccessbuild_cnt" : SUCCESS.size(),
+  "teamfailure" : FAILURE,
+  "teamfailurebuild_cnt" :FAILURE.size(),
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
