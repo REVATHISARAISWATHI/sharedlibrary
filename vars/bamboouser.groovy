@@ -59,7 +59,7 @@ def resultJson = jsonSlurper.parse(reader)
    }
    cns=USERS.size()
 
-	  //println(js)
+	
 	   LISS[j]=USERS.clone()
 	   LISF[j]=USERF.clone()
 	   
