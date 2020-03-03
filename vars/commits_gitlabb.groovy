@@ -77,9 +77,9 @@ for(i=0;i<ecount;i++)
 	}
     */
  jsonBuilder.gitlab(
-  "commit" : resultJson,
+  "total_commit" : resultJson,
   "commit_cnt" : resultJson.size(),
-	 "individual":LIST
+	 "individual_commit_Details":LIST
   
   )
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/output1.json")
