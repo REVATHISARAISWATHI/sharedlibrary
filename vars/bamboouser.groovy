@@ -97,7 +97,7 @@ def resultJson = jsonSlurper.parse(reader)
    }
   }
 	
-		    jsonBuilder(
+		    jsonBuilder.Bamboo(
   "teamsuccess" : SUCCESS,
   "teamsuccessbuild_cnt" : SUCCESS.size(),
   "teamfailure" : FAILURE,
