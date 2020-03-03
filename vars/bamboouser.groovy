@@ -64,7 +64,7 @@ def resultJson = jsonSlurper.parse(reader)
    cns=USERS.size()
 JSONArray js = new JSONArray(USERS)
 	  println(js)
-   LISTSUCCESS.add(["email":email,"success":js,"Success_cnt":cns])
+   LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":js,"Success_cnt":cns]))
    USERS.clear()
 	 
    cnf=USERF.size()
@@ -91,7 +91,7 @@ JSONArray js = new JSONArray(USERS)
      
    }
   }
-	
+	LISTSUCCESS=LISTSUCCESS.toString()
 		    jsonBuilder(
   "success" : SUCCESS,
   "successbuild_cnt" : SUCCESS.size(),
