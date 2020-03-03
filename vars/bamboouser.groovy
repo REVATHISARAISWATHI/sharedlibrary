@@ -115,10 +115,10 @@ def jsonObj1 = readJSON text: json
 	//def res=jsonBuilder.toString()
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/bamboo.json")
 file.write(jsonBuilder.toPrettyString())
-	def reader1 = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/bamboo.json"),"UTF-8"))
-def resu = jsonSlurper.parse(reader1)
+	//def reader1 = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/bamboo.json"),"UTF-8"))
+//def resu = jsonSlurper.parse(reader1)
 
-	println(resu.individualsuccess[2].Success_cnt)
+	//println(resu.individualsuccess[2].Success_cnt)
 				   //println(jsonBuilder)
 	
 
