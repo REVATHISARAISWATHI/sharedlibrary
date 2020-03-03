@@ -61,8 +61,8 @@ for(i=0;i<ecount;i++)
      }
 	// println(jsonObj.config.emails.email[i])
 	 cnt=JSON.size()
-	 LIST.add(["email":email,"Commit":JsonOutput.toJson(JSON),"Commit_cnt":cnt])
-	
+	 //LIST.add(["email":email,"Commit":JsonOutput.toJson(JSON),"Commit_cnt":cnt])
+	LIST.add(["email":email,"Commit":JSON,"Commit_cnt":cnt])
 	 //JCOPY[i]=(JsonOutput.toJson(JSON))
 	// println(JCOPY[i])
 	 JSON.clear()
