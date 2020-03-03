@@ -44,6 +44,7 @@ def total = resultJson.size()
       println(JsonOutput.toJson(resultJson))
       List<String> JSON = new ArrayList<String>();
    	 List<String> LIST = new ArrayList<String>();
+	 List<String> LIST1 = new ArrayList<String>();
 
 	 def jsonBuilder = new groovy.json.JsonBuilder()
 for(i=0;i<ecount;i++)
@@ -55,13 +56,14 @@ for(i=0;i<ecount;i++)
 	 // println(resultJson[j].author_email)
    if(email==resultJson[j].author_email)
    {
-	   JSON.add(JsonOutput.toJson(resultJson[j]))
+	   JSON.add(resultJson[j])
 	 // JSON.add(resultJson[j])
      }
      }
 	// println(jsonObj.config.emails.email[i])
 	 cnt=JSON.size()
-	 LIST.add(["email":email,"Commit":JsonOutput.toJson(JSON),"Commit_cnt":cnt])
+	 JSON1[i]=JSON.clone()
+	 LIST.add(["email":email,"Commit": JSON1[i],"Commit_cnt":cnt])
 	//LIST.add(["email":email,"Commit":JSON,"Commit_cnt":cnt])
 	 //JCOPY[i]=(JsonOutput.toJson(JSON))
 	// println(JCOPY[i])
