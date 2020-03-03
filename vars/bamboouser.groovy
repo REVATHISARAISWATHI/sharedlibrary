@@ -103,13 +103,14 @@ def resultJson = jsonSlurper.parse(reader)
 	/*def json = jsonBuilder
 def jsonObj1 = readJSON text: json
 	def cnt=jsonObj1.failurebuild_cnt*/
-def b = new JsonBuilder(successbuild_cnt)
+//def b = new JsonBuilder(successbuild_cnt)
 	//println(jsonObj1)
 //String a=jsonObj1.individualsuccess
 //String jsonBuilder1=a.replaceAll("\"," ");
 	//def res=jsonBuilder.toString()
-
-	println(b)
+File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/bamboo.json")
+file.write(jsonBuilder.toPrettyString())	
+	//println(b)
 				   //println(jsonBuilder)
 	
 
