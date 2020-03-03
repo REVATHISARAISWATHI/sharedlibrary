@@ -100,16 +100,16 @@ def resultJson = jsonSlurper.parse(reader)
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
-	def json = jsonBuilder
+	/*def json = jsonBuilder
 def jsonObj1 = readJSON text: json
-	def cnt=jsonObj1.failurebuild_cnt
-
+	def cnt=jsonObj1.failurebuild_cnt*/
+def b = new JsonBuilder(successbuild_cnt).toPrettyString();
 	//println(jsonObj1)
 //String a=jsonObj1.individualsuccess
 //String jsonBuilder1=a.replaceAll("\"," ");
 	//def res=jsonBuilder.toString()
 
-	println(cnt)
+	println(b)
 				   //println(jsonBuilder)
 	
 
