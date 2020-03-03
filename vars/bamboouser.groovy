@@ -59,10 +59,6 @@ def resultJson = jsonSlurper.parse(reader)
 	   
 	   USERF.add(resultJson.results.result[i])
    }
-	  else if(resultJson.results.result[i].buildReason.contains("Manual run"))
-	  {
-		UNKNOWN.add(resultJson.results.result[i])
-	  }
    }
    cns=USERS.size()
 
@@ -105,8 +101,6 @@ def resultJson = jsonSlurper.parse(reader)
   "teamsuccessbuild_cnt" : SUCCESS.size(),
   "teamfailure" : FAILURE,
   "teamfailurebuild_cnt" :FAILURE.size(),
-  "unknownuserdata":UNKNOWN,
-  "unknownuser_cnt":UNKNOWN.size(),
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
