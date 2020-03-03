@@ -64,7 +64,7 @@ def resultJson = jsonSlurper.parse(reader)
    }
    }
    cns=USERS.size()
-//JSONArray js = new JSONArray(USERS)
+
 	  //println(js)
 	   LISS[j]=USERS.clone()
 	   LISF[j]=USERF.clone()
@@ -96,7 +96,7 @@ def resultJson = jsonSlurper.parse(reader)
      
    }
   }
-	//LISTSUCCESS=LISTSUCCESS.toString()
+	
 		    jsonBuilder(
   "teamsuccess" : SUCCESS,
   "teamsuccessbuild_cnt" : SUCCESS.size(),
@@ -105,14 +105,7 @@ def resultJson = jsonSlurper.parse(reader)
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
-	/*def json = jsonBuilder
-def jsonObj1 = readJSON text: json
-	def cnt=jsonObj1.failurebuild_cnt*/
-//def b = new JsonBuilder(successbuild_cnt)
-	//println(jsonObj1)
-//String a=jsonObj1.individualsuccess
-//String jsonBuilder1=a.replaceAll("\"," ");
-	//def res=jsonBuilder.toString()
+	
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/bamboo.json")
 file.write(jsonBuilder.toPrettyString())
 	//def reader1 = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/bamboo.json"),"UTF-8"))
