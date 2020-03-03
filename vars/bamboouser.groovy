@@ -15,8 +15,9 @@ def mailcount = jsonObj.config.emails.email.size()
   -H 'cache-control: no-cache' \
   -H 'postman-token: 50b866a3-885a-2d59-ea9d-b76fb8b13a16'  -o output.json """*/
 
-  sh "curl -G -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/result/LAT-WEB.json?max-result%3D50%26expand%3Dresults.result.artifacts%26expand%3Dchanges.change.files%26start-index%3D0  -o output.json"
-def jsonSlurper = new JsonSlurper()
+ // sh "curl -G -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/result/LAT-WEB.json?max-result%3D50%26expand%3Dresults.result.artifacts%26expand%3Dchanges.change.files%26start-index%3D0  -o output.json"
+sh "curl -G -X GET -s -u rig:rigaDapt@devOps ${IP}/rest/api/latest/result/LAT-WEB.json?max-result=50&expand=results.result.artifacts&expand=changes.change.files&start-index=0
+	def jsonSlurper = new JsonSlurper()
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 
