@@ -27,6 +27,7 @@ def resultJson = jsonSlurper.parse(reader)
   List<String> USERS = new ArrayList<String>()
 	List<String> USERF = new ArrayList<String>()
  List<String>  LISTSUCCESS=new ArrayList<String>()
+	 List<String>  LIS=new ArrayList<String>()
 	List<String> LISTFAILURE=new ArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>()
     List<String> FAILURE = new ArrayList<String>()
@@ -64,7 +65,9 @@ def resultJson = jsonSlurper.parse(reader)
    cns=USERS.size()
 //JSONArray js = new JSONArray(USERS)
 	  //println(js)
-   LISTSUCCESS.add(["email":email,"success":USERS,"Success_cnt":cns])
+	   LIS[j]=USERS
+	   
+   LISTSUCCESS.add(["email":email,"success":LIS[j],"Success_cnt":cns])
    USERS.clear()
 	 
    cnf=USERF.size()
