@@ -107,7 +107,7 @@ def resultJson = jsonSlurper.parse(reader)
 	//println(jsonObj1)
 //String a=jsonObj1.individualsuccess
 //String jsonBuilder1=a.replaceAll("\"," ");
-				   println(jsonBuilder.toString())
+				   println(jsonBuilder)
 	
 
 }
