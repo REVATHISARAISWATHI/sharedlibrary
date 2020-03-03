@@ -91,7 +91,7 @@ def resultJson = jsonSlurper.parse(reader)
      
    }
   }
-	LISTSUCCESS=LISTSUCCESS.toString()
+	//LISTSUCCESS=LISTSUCCESS.toString()
 		    jsonBuilder(
   "success" : SUCCESS,
   "successbuild_cnt" : SUCCESS.size(),
@@ -107,7 +107,7 @@ def resultJson = jsonSlurper.parse(reader)
 	//println(jsonObj1)
 //String a=jsonObj1.individualsuccess
 //String jsonBuilder1=a.replaceAll("\"," ");
-				   println(jsonBuilder)
+				   println(jsonBuilder.toString())
 	
 
 }
