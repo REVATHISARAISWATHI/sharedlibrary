@@ -59,7 +59,7 @@ def resultJson = jsonSlurper.parse(reader)
 	   
 	   USERF.add(resultJson.results.result[i])
    }
-	  else
+	  else if(resultJson.results.result[i].buildReason.contains("Manual run"))
 	  {
 		UNKNOWN.add(resultJson.results.result[i])
 	  }
