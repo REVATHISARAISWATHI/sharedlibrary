@@ -113,7 +113,7 @@ file.write(jsonBuilder.toPrettyString())
 	def reader1 = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/bamboo.json"),"UTF-8"))
 def resu = jsonSlurper.parse(reader1)
 
-	println(res.successbuild_cnt)
+	println(resu.successbuild_cnt)
 				   //println(jsonBuilder)
 	
 
