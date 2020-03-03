@@ -26,6 +26,8 @@ def resultJson = jsonSlurper.parse(reader)
 	List<String> LISTFAILURE=new ArrayList<String>()
 	List<String> SUCCESS = new ArrayList<String>()
     List<String> FAILURE = new ArrayList<String>()
+	 List<String> UNKNOWN = new ArrayList<String>()
+	
 	
 
 
@@ -38,6 +40,7 @@ def resultJson = jsonSlurper.parse(reader)
    {
 	   def cns=0
 	   def cnf=0
+	  
     def email=jsonObj.config.emails.email[j] 
   for(i=0;i<50;i++)
   {
@@ -56,6 +59,10 @@ def resultJson = jsonSlurper.parse(reader)
 	   
 	   USERF.add(resultJson.results.result[i])
    }
+	  else
+	  {
+		UNKNOWN.add(resultJson.results.result[i])
+	  }
    }
    cns=USERS.size()
 
@@ -69,6 +76,8 @@ def resultJson = jsonSlurper.parse(reader)
    cnf=USERF.size()
    LISTFAILURE.add(["email":email,"failure":LISF[j],"Failure_cnt":cnf])
    USERF.clear()
+	  
+	   
    }
 	for(i=0;i<50;i++)
   {
@@ -96,6 +105,8 @@ def resultJson = jsonSlurper.parse(reader)
   "teamsuccessbuild_cnt" : SUCCESS.size(),
   "teamfailure" : FAILURE,
   "teamfailurebuild_cnt" :FAILURE.size(),
+  "unknownuserdata":UNKNOWN,
+  "unknownuser_cnt":UNKNOWN.size(),
   "individualsuccess": LISTSUCCESS,
   "individualfailure": LISTFAILURE
   )
