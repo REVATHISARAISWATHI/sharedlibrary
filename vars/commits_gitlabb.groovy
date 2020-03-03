@@ -55,8 +55,8 @@ for(i=0;i<ecount;i++)
 	 // println(resultJson[j].author_email)
    if(email==resultJson[j].author_email)
    {
-	   JSON.add(JsonOutput.toJson(resultJson[j]))
-	  
+	   //JSON.add(JsonOutput.toJson(resultJson[j]))
+	  JSON.add(resultJson[j])
      }
      }
 	// println(jsonObj.config.emails.email[i])
