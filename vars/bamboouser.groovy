@@ -1,6 +1,6 @@
 import groovy.json.*
 import groovy.json.JsonOutput
-
+import org.json.JSONArray
 	
 
 def call(JSON,IP)
@@ -62,8 +62,9 @@ def resultJson = jsonSlurper.parse(reader)
    }
    }
    cns=USERS.size()
+JSONArray js = new JSONArray(USERS)
 	  
-   LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":USERS,"Success_cnt":cns]))
+   LISTSUCCESS.add(["email":email,"success":js,"Success_cnt":cns])
    USERS.clear()
 	 
    cnf=USERF.size()
