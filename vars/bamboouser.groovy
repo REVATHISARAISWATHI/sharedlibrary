@@ -62,9 +62,9 @@ def resultJson = jsonSlurper.parse(reader)
    }
    }
    cns=USERS.size()
-JSONArray js = new JSONArray(USERS)
-	  println(js)
-   LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":js,"Success_cnt":cns]))
+//JSONArray js = new JSONArray(USERS)
+	  //println(js)
+   LISTSUCCESS.add(JsonOutput.toJson(["email":email,"success":USERS,"Success_cnt":cns]))
    USERS.clear()
 	 
    cnf=USERF.size()
