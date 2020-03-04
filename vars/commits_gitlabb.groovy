@@ -85,3 +85,5 @@ for(i=0;i<ecount;i++)
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/commit.json")
 	file.write(jsonBuilder.toPrettyString())
 }
+return jsonBuilder
+}
