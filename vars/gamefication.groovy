@@ -7,6 +7,7 @@ def call(bamboo1)
   //def reader = new BufferedReader(bamboo1)
  // def resultJson = jsonSlurper.parse(bamboo1)
   //def cnt =resultJson.bamboo.teamsuccessbuild_cnt
-  def res=bamboo1.bamboo.teamsuccessbuild_cnt
- println(res)
+ // def res=bamboo1.bamboo.teamsuccessbuild_cnt
+  def obj = JSON.parse(bamboo1);
+ println(obj)
 }
