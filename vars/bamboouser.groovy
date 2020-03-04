@@ -112,6 +112,6 @@ file.write(jsonBuilder.toPrettyString())
 
 	//println(resu.individualsuccess[2].Success_cnt)
 				   //println(jsonBuilder)
-	
+	return jsonBuilder
 
 }
