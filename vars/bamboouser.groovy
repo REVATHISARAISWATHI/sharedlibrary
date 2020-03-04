@@ -111,7 +111,7 @@ file.write(jsonBuilder.toPrettyString())
 //def resu = jsonSlurper.parse(reader1)
 
 	//println(resu.individualsuccess[2].Success_cnt)
-jsonBuilder =jsonBuilder.Stringify()
+//jsonBuilder =jsonBuilder.Stringify()
 	return jsonBuilder
 
 }
