@@ -8,4 +8,5 @@ println(bamboo1)
   def resultJson = jsonSlurper.parse(reader)
   def cnt =resultJson.bamboo.teamsuccessbuild_cnt
   println(cnt)*/
+  def cnt=bamboo1.bamboo.teamsuccessbuild_cnt
 }
