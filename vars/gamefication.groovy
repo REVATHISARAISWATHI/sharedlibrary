@@ -2,12 +2,11 @@ import groovy.json.*
 import groovy.json.JsonOutput
 def call(bamboo1)
 {
-def bamboojson=JSON.stringify(bamboo1)
-  /*def jsonSlurper = new JsonSlurper()
+//println(bamboo1)
+  //def jsonSlurper = new JsonSlurper()
   //def reader = new BufferedReader(bamboo1)
  // def resultJson = jsonSlurper.parse(bamboo1)
   //def cnt =resultJson.bamboo.teamsuccessbuild_cnt
-  def res=JSON.parse(bamboo1)
-  println(res)*/
-  println(bamboojson)
+  def res=JSON.parseText(bamboo1)
+ println(res)
 }
