@@ -8,6 +8,6 @@ def call(bamboo1)
  // def resultJson = jsonSlurper.parse(bamboo1)
   //def cnt =resultJson.bamboo.teamsuccessbuild_cnt
  // def res=bamboo1.bamboo.teamsuccessbuild_cnt
-  def obj = JSON.parsetext(bamboo1)
+  def obj = JSON.parseText(bamboo1)
  println(obj)
 }
