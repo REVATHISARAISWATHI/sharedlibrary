@@ -4,7 +4,7 @@ def call(gitlab)
 {
 def jsonString = gitlab
 def jsonObj = readJSON text: jsonString
-  println(jsonObj)
+  //println(jsonObj)
   def cnt =jsonObj.gitlab.commit_cnt
  // def res=bamboo1.bamboo.teamsuccessbuild_cnt
  // def obj = JSON.parse(bamboo1)
