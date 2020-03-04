@@ -82,6 +82,6 @@ for(i=0;i<ecount;i++)
 	 "individual_commit_Details":LIST
   
   )
-File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/output1.json")
+File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/commit.json")
 	file.write(jsonBuilder.toPrettyString())
 }
