@@ -9,7 +9,7 @@ def jsonObj = readJSON text: jsonString
   def fcnt=jsonObj.Bamboo.teamfailurebuild_cnt
  // def res=bamboo1.bamboo.teamsuccessbuild_cnt
  // def obj = JSON.parse(bamboo1)
- println(fcnt)
+ //println(fcnt)
  def score=0
  if(scnt>10)
   {
