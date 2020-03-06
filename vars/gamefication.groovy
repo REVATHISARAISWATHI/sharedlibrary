@@ -18,7 +18,7 @@ def team=jsonObj.riglet_info.name
    {
 	 def email=jsonObj.config.emails.email[j] 
 	   
-	    
+	  println(email)  
      // name="Bamboo"
     //  def jsonStringb = bamboo
 def jsonObjb = readJSON text: bamboo1
