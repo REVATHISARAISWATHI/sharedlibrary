@@ -69,7 +69,7 @@ int ecount = jsonObj.config.emails.email.size()
 //def jsonStringa = bitbucket
 def jsonObjb = readJSON text: jsonStringa[i]
 int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
-	    def email1=jsonObjb.bitbucket.Individual_commits[j].email
+	    def email1=jsonObjb.bitbucket.Individual_commits[j].Email
  // println(jsonObja)
   //println(total)
  
