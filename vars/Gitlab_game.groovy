@@ -20,11 +20,11 @@ List<String> JSON = new ArrayList<String>();
 	    def ccnt =jsonObj1.gitlab.individual_commit_Details[j].Commit_cnt  
        def email1=jsonObj1.gitlab.individual_commit_Details[j].email
         println(ccnt)
-        int score=0
-        if(email==email1 && ccnt>5)
+       // int score=0
+       // if(email==email1 && ccnt>5)
         {
-        score=score+10
-         LIST.add(["metric":"No of commits","score":score])
+        //score=score+10
+         LIST.add(["metric":"No of commits","value":ccnt])
          }
             JSON1=LIST.clone()
 	   
