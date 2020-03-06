@@ -73,7 +73,7 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
  // println(jsonObja)
   //println(total)
  
-  if(email==email1 && total>5)
+  if(email==email1 && total>1)
   {
     score=total*1
 	   LIST.add(["toolname":name,"metric":"commits","score":score])
