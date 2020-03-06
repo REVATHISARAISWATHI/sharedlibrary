@@ -13,6 +13,9 @@ def team=jsonObj.riglet_info.name
   List<String> LIST = new ArrayList<String>();
   List<String> JSON1 = new ArrayList<String>();
 def jsonBuilder = new groovy.json.JsonBuilder()
+	def jsonString1=bamboo1
+     def jsonObj1=readJSON text: jsonString1
+  println(jsonObj1)
 
   for(j=0;j<ecount;j++)
    {
@@ -20,9 +23,7 @@ def jsonBuilder = new groovy.json.JsonBuilder()
 	   
 	  //println(email)  
      // name="Bamboo"
-      def jsonString1 = bamboo1
-     def jsonObj1 = readJSON text: jsonString1
-  println(jsonObj1)
+      
   def scnt =jsonObj1.Bamboo.individualsuccess[j].Success_cnt
   def fcnt =jsonObj1.Bamboo.individualfailure[j].Failure_cnt
  def email1=jsonObj1.Bamboo.individualsuccess[j].email
