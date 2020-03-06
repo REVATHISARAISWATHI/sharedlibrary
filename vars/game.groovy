@@ -86,7 +86,7 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
 	      //metric="commits"
         def jsonObjc= readJSON text: jsonStringa[i]
   //println(jsonObj)
-  def cnt =jsonObjc.gitlab.individual_commit_Details[j].commit_cnt
+  def cnt =jsonObjc.gitlab.individual_commit_Details[j].Commit_cnt
 	       def email1=jsonObjc.gitlab.individual_commit_Details[j].email
 	       if(email==email1 && cnt>1)
   {
