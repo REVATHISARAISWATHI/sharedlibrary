@@ -34,7 +34,7 @@ def jsonObjb = readJSON text: bamboo1
     LIST.add(["metric":"No of more successful builds","score":score])
     score=0
   }
-     if(email==email1 && fcnt<2 )
+     if(email==email1 && fcnt<2 && scnt!=0)
   {
    score=score+10 
     LIST.add(["metric":"No of least failure builds","score":score])
