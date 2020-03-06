@@ -44,4 +44,6 @@ def total = resultJson.size()
 )
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/merge.json")
 	file.write(jsonBuilder.toPrettyString())
+
+return jsonBuilder
 }
