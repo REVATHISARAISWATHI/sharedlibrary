@@ -33,7 +33,7 @@ List<String> JSON = new ArrayList<String>();
     
 	 jsonBuilder(
 		 "team":team,
-		// "metrics":JSON
+		 "metrics":JSON
                   )
     println(jsonBuilder)
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/merge_score.json")
