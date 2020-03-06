@@ -107,11 +107,11 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
 	def me=0
 	for(i=0;i<JSON.size();i++)
 	{
-for(j=1;j<JSON.size();j++)
+for(j=i;j<JSON.size();j++)
 		{
 			
 			
-			if(JSON[i].reward>=JSON[j].reward && JSON[i].reward!=0)
+			if(JSON[i].reward>=JSON[j].reward )
 						{
 							me=JSON[i]
 							JSON[i]=JSON[j]
