@@ -107,7 +107,7 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
 
 jsonBuilder(
  "teamName":team,
-  "metrics" : JSON
+  "metrics" : JSON.sort()
   
 ) 
   
