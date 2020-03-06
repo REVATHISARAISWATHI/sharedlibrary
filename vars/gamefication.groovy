@@ -20,7 +20,7 @@ def team=jsonObj.riglet_info.name
 	   
 	  //println(email)  
      // name="Bamboo"
-    //  def jsonStringb = bamboo
+      def jsonStringb = bamboo1
 def jsonObjb = readJSON text: bamboo1
   println(jsonObjb)
   def scnt =jsonObjb.Bamboo.individualsuccess[j].Success_cnt
