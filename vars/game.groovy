@@ -126,7 +126,7 @@ for(j=1;j<JSON.size();j++)
 
 jsonBuilder(
  "teamName":team,
-  "metrics" : JSON.sort(reward)
+  "metrics" : JSON
   
 ) 
   
