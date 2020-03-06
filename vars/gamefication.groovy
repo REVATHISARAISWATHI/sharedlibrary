@@ -27,7 +27,7 @@ def jsonObjb = readJSON text: bamboo1
  // def res=bamboo1.bamboo.teamsuccessbuild_cnt
  // def obj = JSON.parse(bamboo1)
  println(scnt)
- 
+ int score=0
  if(email==email1 && scnt>10)
   {
    score=score+10 
