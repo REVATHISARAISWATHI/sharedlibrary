@@ -24,6 +24,7 @@ int ecount = jsonObj.config.emails.email.size()
     int score=0
 	   int reward=0
     String name="  "
+	  
   if(jsonStringa[i].contains("Bamboo"))
     {
  
@@ -67,7 +68,7 @@ int ecount = jsonObj.config.emails.email.size()
 //def jsonStringa = bitbucket
 def jsonObjb = readJSON text: jsonStringa[i]
 int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
-	    def email1=jsonObja.Bamboo.individualsuccess[j].email
+	    def email1=jsonObjb.Bamboo.individualsuccess[j].email
  // println(jsonObja)
   //println(total)
  
