@@ -19,7 +19,7 @@ List<String> JSON = new ArrayList<String>();
 	 def email=jsonObj.config.emails.email[j] 
 	    def ccnt =jsonObj1.gitlab.individual_commit_Details[j].Commit_cnt  
        def email1=jsonObj1.gitlab.individual_commit_Details[j].email
-        println(scnt)
+        println(ccnt)
         int score=0
         if(email==email1 && ccnt>5)
         {
