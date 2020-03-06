@@ -2,7 +2,7 @@ import groovy.json.*
 import groovy.json.JsonOutput
 def call(jsondata,bamboo1)
 {
-ef jsonString = jsondata
+def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
 
