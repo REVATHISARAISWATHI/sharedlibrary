@@ -14,7 +14,8 @@ sh "curl  -X GET  -u rig:rigaDapt@devOps '${IP}/rest/api/latest/result/LAT-WEB.j
 def reader = new BufferedReader(new InputStreamReader(new FileInputStream("/var/lib/jenkins/workspace/${JOB_NAME}/output.json"),"UTF-8"))
 def resultJson = jsonSlurper.parse(reader)
 
-
+def bno=resultJson.results.result[0].buildNumber
+	println(bno)
  
 
 
@@ -94,10 +95,9 @@ def resultJson = jsonSlurper.parse(reader)
        FAILURE.add(resultJson.results.result[i])
      
    }
-  }
 	
 		    jsonBuilder.Bamboo(
- "totalBuilds" :resultJson.results.result[0].buildNumber,
+ "totalBuilds" :bno,
   "teamsuccess" : SUCCESS,
   "teamsuccessbuild_cnt" : SUCCESS.size(),
   "teamfailure" : FAILURE,
