@@ -19,13 +19,13 @@ List<String> JSON = new ArrayList<String>();
 	 def email=jsonObj.config.emails.email[j]*/
 	    def mcnt =jsonObj1.gitlab.merge_cnt
        //def email1=jsonObj1.gitlab.individual_commit_Details[j].email
-        println(mcnt)
+      /*  println(mcnt)
         int score=0
         if(mcnt>2)
         {
-        score=score+10
-         LIST.add(["metric":"No of merge_requests","score":score])
-         }
+        score=score+10*/
+         LIST.add(["metric":"merge_requests","value":mcnt])
+        // }
             JSON1=LIST.clone()
 	   
    JSON.add(["metrics":JSON1])
