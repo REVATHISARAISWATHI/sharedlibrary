@@ -40,11 +40,11 @@ def jsonObjb = readJSON text: bamboo1
     LIST.add(["metric":"No of least failure builds","score":score])
     score=0
   }
-    }
-     JSON1=LIST.clone()
+	   JSON1=LIST.clone()
    JSON.add(["email":email,"metrics":JSON1])
     LIST.clear()
-    
+    }
+     
     
   println(JSON)
 }
