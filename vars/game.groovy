@@ -95,6 +95,7 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
 	  reward=reward+score
 	  score=0
   }
+      }
     }
 	   JSON1[j]=LIST.clone()
 	   
