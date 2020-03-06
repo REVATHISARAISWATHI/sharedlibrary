@@ -35,7 +35,7 @@ List<String> JSON = new ArrayList<String>();
 		 "team":team,
 		 "metrics":JSON
                   )
-    println(jsonBuilder)
+   // println(jsonBuilder)
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/merge_score.json")
 	file.write(jsonBuilder.toPrettyString())
 }
