@@ -111,7 +111,7 @@ for(j=i;j<JSON.size();j++)
 		{
 			
 			
-			if(JSON[i].reward>=JSON[j].reward )
+			if(JSON[i].reward<=JSON[j].reward )
 						{
 							me=JSON[i]
 							JSON[i]=JSON[j]
