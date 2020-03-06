@@ -14,7 +14,7 @@ int ecount = jsonObj.config.emails.email.size()
 	List<String> jsonStringa= new ArrayList<String>();
   jsonStringa.add(bitbucket)
    jsonStringa.add(bamboo)
-   jsonStringa.add(gitlab)
+  // jsonStringa.add(gitlab)
 	 for(j=0;j<ecount;j++)
    {
 	 def email=jsonObj.config.emails.email[j] 
