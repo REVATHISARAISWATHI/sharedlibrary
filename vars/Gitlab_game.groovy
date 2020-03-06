@@ -39,4 +39,7 @@ List<String> JSON = new ArrayList<String>();
      
     
   println(jsonBuilder)
+
+File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/score.json")
+	file.write(jsonBuilder.toPrettyString())
 }
