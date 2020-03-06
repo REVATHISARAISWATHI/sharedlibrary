@@ -19,11 +19,12 @@ int ecount = jsonObj.config.emails.email.size()
 	 for(j=0;j<ecount;j++)
    {
 	 def email=jsonObj.config.emails.email[j] 
+	   int score=0
+    int reward=0
+    String name="  "
 	 for(i=0;i<jsonStringa.size();i++)
   { 
-    int score=0
-	   int reward=0
-    String name="  "
+   
 	  
   if(jsonStringa[i].contains("Bamboo"))
     {
