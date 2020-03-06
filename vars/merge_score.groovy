@@ -28,7 +28,7 @@ List<String> JSON = new ArrayList<String>();
         // }
             JSON1=LIST.clone()
 	   
-   //JSON.add(["metrics":JSON1])
+   JSON.add(["metriczz":JSON1])
     LIST.clear()
     
 	 jsonBuilder(
