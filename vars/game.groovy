@@ -28,7 +28,7 @@ int ecount = jsonObj.config.emails.email.size()
  
 	   
 	    
-     // name="Bamboo"
+     name="bamboo"
     //  def jsonStringb = bamboo
 	   def jsonObja = readJSON text: jsonStringa[i]
 
@@ -44,7 +44,7 @@ int ecount = jsonObj.config.emails.email.size()
 	  
  if(email==email1 && scnt>1)
   {
-   score=score+10 
+   score=scnt*1
     LIST.add(["toolname":name,"metric":"No of more successful builds","score":score])
 	reward=reward+score  
     score=0
@@ -59,18 +59,19 @@ int ecount = jsonObj.config.emails.email.size()
    }
 	    if(jsonStringa[i].contains("bitbucket"))
     {
-      name="Bitbucket"
+      name="bitbucket"
 	    
 	    
 //def jsonStringa = bitbucket
 def jsonObjb = readJSON text: jsonStringa[i]
 int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
+	    def email1=jsonObja.Bamboo.individualsuccess[j].email
  // println(jsonObja)
   //println(total)
  
-  if(total>5)
+  if(email==email1 && total>5)
   {
-    score=score+10
+    score=total*1
 	   LIST.add(["toolname":name,"metric":"commits","score":score])
 	  reward=reward+score
 	  score=0
