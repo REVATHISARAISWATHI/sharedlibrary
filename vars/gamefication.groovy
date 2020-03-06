@@ -28,20 +28,24 @@ def jsonObjb = readJSON text: bamboo1
  // def obj = JSON.parse(bamboo1)
  println(scnt)
  int score=0
+	   int reward=0
  if(email==email1 && scnt>1)
   {
    score=score+10 
     LIST.add(["metric":"No of more successful builds","score":score])
+	reward=reward+score  
     score=0
   }
      if(email==email1 && fcnt<2 && scnt!=0)
   {
    score=score+10 
     LIST.add(["metric":"No of least failure builds","score":score])
+	  reward=reward+score 
     score=0
   }
 	   JSON1=LIST.clone()
-   JSON.add(["email":email,"metrics":JSON1])
+	   
+   JSON.add(["email":email,"reward": reward,"metrics":JSON1])
     LIST.clear()
     }
      
