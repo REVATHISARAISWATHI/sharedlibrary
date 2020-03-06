@@ -5,11 +5,13 @@ def call(jsondata,bamboo1)
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
+def team=jsonObj.riglet_info.name
 
  
  List<String> JSON = new ArrayList<String>();
   List<String> LIST = new ArrayList<String>();
   List<String> JSON1 = new ArrayList<String>();
+	def jsonBuilder = new groovy.json.JsonBuilder()
 
   for(j=0;j<ecount;j++)
    {
@@ -48,7 +50,12 @@ def jsonObjb = readJSON text: bamboo1
    JSON.add(["email":email,"reward": reward,"metrics":JSON1])
     LIST.clear()
     }
+	 jsonBuilder(
+		 "team":team,
+		 "metrics":JSON
+  
+  )
      
     
-  println(JSON)
+  println(jsonBuilder)
 }
