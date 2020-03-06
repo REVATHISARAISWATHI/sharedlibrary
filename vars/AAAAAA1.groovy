@@ -31,7 +31,9 @@ int ecount = jsonObj.config.emails.email.size()
 	   
 	    
      name="bamboo"
-   	   def jsonObja = readJSON text: jsonStringa[i]
+    //  def jsonStringb = bamboo
+	   // def jsonString1 = jsonStringa[i]
+	   def jsonObja = readJSON text: jsonStringa[i]
 
   //println(jsonObja)
   def scnt =jsonObja.Bamboo.individualsuccess[j].Success_cnt
@@ -99,10 +101,24 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
 	   
    JSON.add(["email":email,"reward": reward,"metrics":JSON1[j]])
     LIST.clear()
-	reward=0 
-	  
+	reward=0    
+	   
     }
-	JSON.sort(it.reward)
+	def me
+	for(i=0;i<JSON.size();i++)
+	{
+for(j=0;j<JSON.size();j++)
+		{
+			
+			
+			if(JSON[i].reward>=JSON[j].reward)
+						{
+							me=JSON[i]
+							JSON[i]=JSON[j]
+							JSON[j]=me
+						}
+						}
+						}
      def jsonBuilder = new groovy.json.JsonBuilder()
 
 jsonBuilder(
