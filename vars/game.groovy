@@ -14,8 +14,7 @@ int ecount = jsonObj.config.emails.email.size()
 	List<String> jsonStringa= new ArrayList<String>();
 	jsonStringa.add(bamboo)
   jsonStringa.add(bitbucket)
-   
-  // jsonStringa.add(gitlab)
+   jsonStringa.add(gitlab)
 	 for(j=0;j<ecount;j++)
    {
 	 def email=jsonObj.config.emails.email[j] 
@@ -80,6 +79,21 @@ int total=jsonObjb.bitbucket.Individual_commits[j].Commit_count
 	  reward=reward+score
 	  score=0
   }
+  }
+	  if(jsonStringa[i].contains("gitlab"))
+      {
+        name="gitlab"
+	      //metric="commits"
+        def jsonObjc= readJSON text: jsonStringa[i]
+  //println(jsonObj)
+  def cnt =jsonObjc.gitlab.individual_commit_Details[j].commit_cnt
+	       def email1=jsonObjc.gitlab.individual_commit_Details[j].email
+	       if(email==email1 && cnt>1)
+  {
+    score=cnt*1
+	   LIST.add(["toolname":name,"metric":"commits","score":score])
+	  reward=reward+score
+	  score=0
   }
     }
 	   JSON1[j]=LIST.clone()
