@@ -28,12 +28,12 @@ List<String> JSON = new ArrayList<String>();
         // }
             JSON1=LIST.clone()
 	   
-   JSON.add(["metriczz":JSON1])
+   JSON.add(["metrics":JSON1])
     LIST.clear()
     
 	 jsonBuilder(
 		 "team":team,
-		 "metrics":JSON
+		// "metrics":JSON
                   )
     println(jsonBuilder)
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/merge_score.json")
