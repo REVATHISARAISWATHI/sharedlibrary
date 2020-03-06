@@ -6,7 +6,7 @@ def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
 def team=jsonObj.riglet_info.name
-	println(team)
+//println(team)
 
  
  List<String> JSON = new ArrayList<String>();
@@ -18,11 +18,11 @@ def team=jsonObj.riglet_info.name
    {
 	 def email=jsonObj.config.emails.email[j] 
 	   
-	  println(email)  
+	  //println(email)  
      // name="Bamboo"
     //  def jsonStringb = bamboo
 def jsonObjb = readJSON text: bamboo1
-  //println(jsonObj)
+  println(jsonObjb)
   def scnt =jsonObjb.Bamboo.individualsuccess[j].Success_cnt
   def fcnt =jsonObjb.Bamboo.individualfailure[j].Failure_cnt
  def email1=jsonObjb.Bamboo.individualsuccess[j].email
