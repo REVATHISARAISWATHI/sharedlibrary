@@ -5,6 +5,7 @@ def call(jsondata,bamboo1)
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 int ecount = jsonObj.config.emails.email.size()
+	def team=jsonObj.riglet_info.name
 
  
  List<String> JSON = new ArrayList<String>();
