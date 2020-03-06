@@ -20,8 +20,8 @@ def jsonBuilder = new groovy.json.JsonBuilder()
 	   
 	  //println(email)  
      // name="Bamboo"
-      def jsonString1 = bamboo1
-def jsonObj1 = readJSON text: jsonString1
+      def jsonString = bamboo1
+def jsonObj1 = readJSON text: jsonString
   println(jsonObj1)
   def scnt =jsonObjb.Bamboo.individualsuccess[j].Success_cnt
   def fcnt =jsonObjb.Bamboo.individualfailure[j].Failure_cnt
