@@ -15,7 +15,7 @@ List<String> JSON = new ArrayList<String>();
 	
 
  /* for(j=0;j<ecount;j++)
-   {
+   
 	 def email=jsonObj.config.emails.email[j]*/
 	    def mcnt =jsonObj1.gitlab.merge_cnt
        //def email1=jsonObj1.gitlab.individual_commit_Details[j].email
@@ -30,16 +30,12 @@ List<String> JSON = new ArrayList<String>();
 	   
    JSON.add(["metrics":JSON1])
     LIST.clear()
-    }
+    
 	 jsonBuilder(
 		 "team":team,
 		 "metrics":JSON
-  
-  )
-     
-    
-  println(jsonBuilder)
-
+                  )
+    println(jsonBuilder)
 File file = new File("/var/lib/jenkins/workspace/${JOB_NAME}/merge_score.json")
 	file.write(jsonBuilder.toPrettyString())
 }
