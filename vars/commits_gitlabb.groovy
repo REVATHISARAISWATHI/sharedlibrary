@@ -41,7 +41,7 @@ def resultJson = jsonSlurper.parse(reader)
 def total = resultJson.size()
    println(total)
 	println(ecount)
-      println(JsonOutput.toJson(resultJson))
+      //println(JsonOutput.toJson(resultJson))
       List<String> JSON = new ArrayList<String>();
    	 List<String> LIST = new ArrayList<String>();
 	 List<String> LIST1 = new ArrayList<String>();
